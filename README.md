@@ -1,50 +1,60 @@
-# React JS + Tailwind CSS Starter Template
+# inti-logam-persada
 
-A starter template for creating React Apps, styled with Tailwind CSS.
+This is the **Inti Logam Persada** landing page project, built with React, Vite, and Tailwind CSS.
 
-## Getting started
+## Scripts
 
+- `dev` — Start the development server with Vite
+- `build` — Build the app for production
+- `preview` — Preview the production build
 
-First, fork this repo.
+## Dependencies
 
-Now head over to creating a <a href="github.com/new">new</a> repo. From the repository template section, click the dropdown and select:
+| Package              | Version    |
+|----------------------|-----------|
+| react                | ^18.2.0   |
+| react-dom            | ^18.2.0   |
+| react-router-dom     | ^6.30.1   |
+| react-icons          | ^5.5.0    |
+| framer-motion        | ^12.23.12 |
+| i18next              | ^25.5.2   |
+| react-i18next        | ^15.7.3   |
+| react-helmet-async   | ^2.0.5    |
 
+## Dev Dependencies
+
+| Package                | Version    |
+|------------------------|-----------|
+| @types/react           | ^18.0.26  |
+| @types/react-dom       | ^18.0.9   |
+| @vitejs/plugin-react   | ^3.0.0    |
+| autoprefixer           | ^10.4.13  |
+| gh-pages               | ^4.0.0    |
+| postcss                | ^8.4.21   |
+| tailwindcss            | ^3.2.4    |
+| vite                   | ^4.0.0    |
+
+## Getting Started
+
+1. Install dependencies:
+	```sh
+	npm install
+	```
+2. Start the development server:
+	```sh
+	npm run dev
+	```
+
+## Build
+
+To build the project for production:
+```sh
+npm run build
 ```
-yourusername/react-js-tailwind
+
+## Preview
+
+To preview the production build:
+```sh
+npm run preview
 ```
-
-Make your changes to suit your project's needs. 
-
-Clone locally with:
-
-```
-git clone https://github.com/yourusername/projectname
-```
-
-In your terminal, run:
-
-```
-npm install
-```
-
-to install all dependencies.
-
-When it's done, run:
-
-```
-npm run dev
-```
-
-Hit
-
-```
-O
-````
-
-and vite will open it in your browser.
-
-Or open your browser and navigate to <a href="localhost:5173">localchost:5173</a>.
-
-Make your changes, save and "VOILA!
-
-Happy hacking!
