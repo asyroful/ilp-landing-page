@@ -1,25 +1,28 @@
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
+
 
 const portfolioItems = [
-  { id: 1, title: 'Komponen Otomotif', img: 'https://images.unsplash.com/photo-1605513219522-d781b3a1a6f2?q=80&w=2070' },
-  { id: 2, title: 'Rangka Mesin Industri', img: 'https://images.unsplash.com/photo-1563889958-3566130b428b?q=80&w=1974' },
-  { id: 3, title: 'Panel Elektronik', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070' },
-  { id: 4, title: 'Peralatan Medis', img: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2070' },
-  { id: 5, title: 'Braket Arsitektur', img: 'https://images.unsplash.com/photo-1556912173-356993125b29?q=80&w=2069' },
-  { id: 6, title: 'Prototipe Kustom', img: 'https://images.unsplash.com/photo-1555529940-08226946a3ce?q=80&w=2070' },
+  { id: 1, titleKey: 'item1', img: 'https://images.unsplash.com/photo-1605513219522-d781b3a1a6f2?q=80&w=2070' },
+  { id: 2, titleKey: 'item2', img: 'https://images.unsplash.com/photo-1563889958-3566130b428b?q=80&w=1974' },
+  { id: 3, titleKey: 'item3', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070' },
+  { id: 4, titleKey: 'item4', img: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2070' },
+  { id: 5, titleKey: 'item5', img: 'https://images.unsplash.com/photo-1556912173-356993125b29?q=80&w=2069' },
+  { id: 6, titleKey: 'item6', img: 'https://images.unsplash.com/photo-1555529940-08226946a3ce?q=80&w=2070' },
 ];
 
 export default function PortfolioPage() {
+  const { t } = useTranslation();
   return (
     <>
       <Helmet>
-        <title>Portofolio - PT Inti Logam Persada</title>
-        <meta name="description" content="Lihat galeri proyek sukses kami di berbagai industri." />
+        <title>{t('portfolio.title', 'Portofolio - PT Inti Logam Persada')}</title>
+        <meta name="description" content={t('portfolio.meta', 'Lihat galeri proyek sukses kami di berbagai industri.')} />
       </Helmet>
 
       <header className="bg-gray-100 py-16 text-center">
-        <h1 className="text-4xl font-bold text-gray-800">Portofolio Proyek Kami</h1>
+        <h1 className="text-4xl font-bold text-gray-800">{t('portfolio.header', 'Portofolio Proyek Kami')}</h1>
       </header>
 
       <div className="container mx-auto px-4 py-20">
@@ -31,9 +34,9 @@ export default function PortfolioPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <img src={item.img} alt={item.title} className="w-full h-72 object-cover" />
+              <img src={item.img} alt={t(`portfolio.${item.titleKey}`)} className="w-full h-72 object-cover" />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="text-white text-xl font-bold">{item.title}</h3>
+                <h3 className="text-white text-xl font-bold">{t(`portfolio.${item.titleKey}`)}</h3>
               </div>
             </motion.div>
           ))}

@@ -1,0 +1,101 @@
+{
+  "navbar": {
+    "home": "Beranda",
+    "about": "Tentang Kami",
+    "services": "Layanan",
+    "portfolio": "Portofolio",
+    "contact": "Hubungi Kami"
+  },
+  "homepage": {
+    "hero": {
+      "title": "Solusi Inovatif Industri Manufaktur",
+      "subtitle": "Kualitas, Presisi, dan Keandalan dalam Setiap Produk yang Kami Hasilkan.",
+      "button": "Pelajari Lebih Lanjut"
+    },
+    "why_us": {
+      "title": "Mengapa Memilih Kami?",
+      "subtitle": "Komitmen kami adalah memberikan nilai lebih bagi setiap klien melalui keunggulan dalam layanan dan produk.",
+      "feature1_title": "Kualitas Terjamin",
+      "feature1_desc": "Kami menggunakan material terbaik dan proses quality control yang ketat.",
+      "feature2_title": "Tim Profesional",
+      "feature2_desc": "Didukung oleh para insinyur dan teknisi berpengalaman di bidangnya.",
+      "feature3_title": "Teknologi Modern",
+      "feature3_desc": "Mengadopsi mesin dan perangkat lunak terkini untuk hasil presisi."
+    },
+    "about_snippet": {
+      "title": "Lebih dari 15 Tahun Melayani Industri",
+      "description": "PT Logam Presisi Nusantara adalah mitra terpercaya Anda dalam penyediaan komponen logam presisi. Sejak 2008, kami telah mendedikasikan diri untuk memberikan solusi manufaktur terbaik.",
+      "button": "Profil Perusahaan"
+    },
+    "clients": {
+      "title": "Dipercaya Oleh Perusahaan Terkemuka"
+    },
+    "cta": {
+      "title": "Mari Wujudkan Proyek Anda Bersama Kami",
+      "subtitle": "Diskusikan kebutuhan Anda dengan tim ahli kami. Dapatkan konsultasi gratis dan penawaran terbaik untuk proyek manufaktur Anda hari ini.",
+      "button": "Hubungi Kami Sekarang"
+    }
+  },
+  "footer": {
+    "description": "Solusi manufaktur logam terdepan yang mengedepankan kualitas, presisi, dan inovasi untuk memenuhi kebutuhan industri global.",
+    "navigation": "Navigasi",
+    "contact_us": "Hubungi Kami",
+    "address": "Jl. Industri Raya No. 123, Tangerang Selatan, Banten",
+    "email": "Email",
+    "phone": "Telepon"
+  },
+  "contact_page": {
+    "header_title": "HUBUNGI KAMI",
+    "header_subtitle": "Kami siap membantu dan menjawab setiap pertanyaan Anda.",
+    "info_title": "Hubungi Kami",
+    "address_label": "Alamat Kantor",
+    "phone_label": "Telepon",
+    "whatsapp_label": "WhatsApp",
+    "email_label": "Email",
+    "social_media_title": "Media Sosial Kami",
+    "form_title": "Kirim Pesan Cepat",
+    "form_name": "Nama Lengkap",
+    "form_email": "Email",
+    "form_subject": "Subjek",
+    "form_message": "Pesan",
+    "form_button": "Kirim Pesan"
+  }
+  ,
+  "about": {
+    "title": "Tentang Kami - PT Inti Logam Persada",
+    "meta": "Pelajari lebih lanjut tentang sejarah, visi, dan misi PT Inti Logam Persada dalam industri manufaktur logam.",
+    "header": "Tentang PT Inti Logam Persada",
+    "history_title": "Perjalanan Kami",
+    "history_desc": "Didirikan pada tahun 2010, PT Inti Logam Persada berawal dari sebuah bengkel kecil dengan visi besar untuk menjadi pemimpin dalam industri manufaktur logam. Dengan dedikasi pada kualitas dan adopsi teknologi, kami telah bertransformasi menjadi perusahaan terpercaya yang melayani klien nasional dan internasional.",
+    "vision_title": "Visi Kami",
+    "vision_desc": "Menjadi perusahaan manufaktur logam pilihan utama di Asia Tenggara yang dikenal akan inovasi, kualitas, dan keandalannya.",
+    "mission_title": "Misi Kami",
+    "mission_1": "Menyediakan produk berkualitas tinggi secara konsisten.",
+    "mission_2": "Berinvestasi dalam teknologi dan sumber daya manusia.",
+    "mission_3": "Membangun kemitraan jangka panjang dengan pelanggan."
+  },
+  "services": {
+    "title": "Layanan Kami - PT Inti Logam Persada",
+    "meta": "Jelajahi layanan manufaktur logam kami, termasuk CNC Machining, Fabrikasi, Welding, dan Surface Finishing.",
+    "header": "Layanan Komprehensif Kami",
+    "cnc_title": "CNC Machining",
+    "cnc_desc": "Proses permesinan terkomputerisasi untuk membuat komponen kompleks dengan tingkat akurasi mikron.",
+    "sheet_title": "Sheet Metal Fabrication",
+    "sheet_desc": "Layanan pemotongan, penekukan, dan perakitan lembaran logam untuk berbagai aplikasi industri.",
+    "welding_title": "Welding & Assembly",
+    "welding_desc": "Jasa pengelasan profesional (MIG, TIG) dan perakitan akhir untuk konstruksi yang kokoh dan rapi.",
+    "finishing_title": "Surface Finishing",
+    "finishing_desc": "Menyediakan layanan finishing seperti powder coating, anodizing, dan polishing untuk estetika dan proteksi."
+  },
+  "portfolio": {
+    "title": "Portofolio - PT Inti Logam Persada",
+    "meta": "Lihat galeri proyek sukses kami di berbagai industri.",
+    "header": "Portofolio Proyek Kami",
+    "item1": "Komponen Otomotif",
+    "item2": "Rangka Mesin Industri",
+    "item3": "Panel Elektronik",
+    "item4": "Peralatan Medis",
+    "item5": "Braket Arsitektur",
+    "item6": "Prototipe Kustom"
+  }
+}
