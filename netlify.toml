@@ -1,0 +1,13 @@
+# File: netlify.toml
+
+[build]
+  # Perintah untuk membangun situs Anda
+  command = "npm run build"
+  
+  # Direktori yang akan diterbitkan setelah build selesai
+  publish = "dist"
+
+[build.environment]
+  # (Opsional tapi direkomendasikan) Tentukan versi Node.js
+  # Gunakan versi yang sama dengan yang Anda pakai di lokal
+  NODE_VERSION = "18"
