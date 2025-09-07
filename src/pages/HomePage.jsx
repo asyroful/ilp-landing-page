@@ -1,16 +1,20 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { FaArrowRight, FaCog, FaShieldAlt, FaTruck, FaMedal, FaUsers, FaDraftingCompass } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import { useEffect, useRef } from 'react';
+import { blogPosts } from '../data/blogData';
 
 // --- SUB-KOMPONEN UNTUK KERAPIAN ---
 
 // 1. Hero Section (Banner Utama)
 const HeroSection = () => {
   const { t } = useTranslation();
-  // Fungsi untuk handle smooth
-  //  scroll
+  const { scrollYProgress } = useScroll();
+  // Membuat background bergerak lebih lambat (0.5x kecepatan scroll) saat scroll ke bawah
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  // Fungsi untuk handle smooth scroll
   const handleScroll = () => {
     const nextSection = document.getElementById('why-us');
     if (nextSection) {
@@ -19,23 +23,26 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative bg-gray-800 text-white min-h-screen flex items-center justify-center text-center overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-center z-0" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1581092921462-20520a5a3174?q=80&w=2070')" }}></div>
+    <div className="relative h-screen flex items-center justify-center text-center overflow-hidden">
+      <motion.div
+        className="absolute inset-0 bg-cover bg-center z-0"
+        style={{ 
+          backgroundImage: "url('https://images.unsplash.com/photo-1581092921462-20520a5a3174?q=80&w=2070')",
+          y // Menerapkan efek parallax
+        }}
+      />
       <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
-      <motion.div className="relative z-20 container mx-auto px-4" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, staggerChildren: 0.2 }}>
-        <motion.h1 className="text-4xl md:text-6xl font-extrabold mb-4" variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
+      <motion.div className="relative z-20 container mx-auto px-4" initial="hidden" animate="visible" variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1, transition: { staggerChildren: 0.3 } }
+      }}>
+        <motion.h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-white" variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition:{duration: 0.8} } }}>
           {t('homepage.hero.title')}
         </motion.h1>
-        <motion.p className="text-lg md:text-xl max-w-3xl mx-auto mb-8" variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
+        <motion.p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-200" variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition:{duration: 0.8} } }}>
           {t('homepage.hero.subtitle')}
         </motion.p>
-        <motion.button
-          onClick={handleScroll}
-          className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-        >
+        <motion.button onClick={handleScroll} className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition:{duration: 0.8} } }}>
           {t('homepage.hero.button')}
         </motion.button>
       </motion.div>
@@ -52,29 +59,46 @@ const WhyChooseUsSection = () => {
     { icon: <FaDraftingCompass size={32} />, title: t('homepage.why_us.feature3_title'), desc: t('homepage.why_us.feature3_desc') }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2 // Setiap anak elemen akan muncul dengan jeda 0.2 detik
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { type: 'spring', stiffness: 100 } // Efek pegas
+    }
+  };
+
   return (
     <section id="why-us" className="py-20 bg-white">
       <div className="container mx-auto px-4 text-center">
-        <motion.h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-          {t('homepage.why_us.title')}
-        </motion.h2>
-        <motion.p className="text-gray-600 max-w-2xl mx-auto mb-12" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.2 }}>
-          {t('homepage.why_us.subtitle')}
-        </motion.p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">{t('homepage.why_us.title')}</h2>
+        <p className="text-gray-600 max-w-2xl mx-auto mb-12">{t('homepage.why_us.subtitle')}</p>
+        
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }} // Animasi berjalan saat setengah bagian terlihat
+        >
           {features.map((feature, index) => (
-            <motion.div key={index} className="p-8 rounded-lg shadow-lg bg-gray-50 text-center"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-            >
+            <motion.div key={index} className="p-8 rounded-lg shadow-lg bg-gray-50 text-center" variants={itemVariants}>
               <div className="text-red-600 mb-4 inline-block">{feature.icon}</div>
               <h3 className="text-xl font-bold mb-3 text-gray-800">{feature.title}</h3>
               <p className="text-gray-600">{feature.desc}</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -83,18 +107,29 @@ const WhyChooseUsSection = () => {
 // 3. About Us Snippet Section
 const AboutSnippetSection = () => {
   const { t } = useTranslation();
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"] // Lacak scroll dari awal elemen terlihat hingga akhir elemen hilang
+  });
+  // Membuat gambar bergerak ke atas (-100px) saat section di-scroll
+  const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+
   return (
-    <section className="py-20 bg-gray-50">
+    <section ref={ref} className="py-20 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
-            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974" alt="Tim Profesional" className="rounded-lg shadow-xl w-full"/>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
+          <div className="w-full h-[500px] rounded-lg shadow-xl overflow-hidden">
+            <motion.img 
+              src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974" 
+              alt="Tim Profesional" 
+              className="w-full h-full object-cover"
+              style={{ y }} // Terapkan gerakan vertikal
+            />
+          </div>
+          <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeInOut" }}>
             <h2 className="text-3xl font-bold text-gray-800 mb-4">{t('homepage.about_snippet.title')}</h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              {t('homepage.about_snippet.description')}
-            </p>
+            <p className="text-gray-600 leading-relaxed mb-6">{t('homepage.about_snippet.description')}</p>
             <Link to="/about" className="inline-flex items-center bg-red-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-red-700 transition-colors">
               {t('homepage.about_snippet.button')} <FaArrowRight className="ml-2" />
             </Link>
@@ -162,9 +197,69 @@ const CtaSection = () => {
   );
 };
 
+const LatestNewsSection = () => {
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language;
+  // Pastikan blogPosts sudah di-import
+  // Ambil 3 postingan terbaru (urutkan berdasarkan tanggal terbaru)
+  const latestPosts = [...blogPosts]
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 3);
+
+  return (
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">{t('latest_news_section.title')}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {latestPosts.map((post, index) => (
+            <motion.div
+              key={post.slug}
+              className="bg-white rounded-lg shadow-lg overflow-hidden group"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -10, boxShadow: '0 25px 50px -12px rgb(0 0 0 / 0.25)' }}
+            >
+              <Link to={`/blog/${post.slug}`}>
+                <div className="overflow-hidden h-56">
+                  <img
+                    src={post.thumbnail}
+                    alt={post.title[currentLang]}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <p className="text-sm text-gray-500 mb-2">{post.date} • {post.author}</p>
+                  <h3 className="text-lg font-bold text-gray-800 mb-3 h-16">{post.title[currentLang]}</h3>
+                  <p className="text-gray-600 mb-4">{post.excerpt[currentLang]}</p>
+                  <span className="font-bold text-red-600 group-hover:underline">
+                    {t('blog_page.read_more')}
+                  </span>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+        <div className="text-center mt-12">
+          <Link
+            to="/blog"
+            className="inline-block bg-red-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-red-700 transition-colors shadow-lg"
+          >
+            {t('latest_news_section.view_all', 'Lihat Semua Berita')}
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 
 // --- KOMPONEN UTAMA HOMEPAGE ---
 export default function HomePage() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <>
       <Helmet>
@@ -175,6 +270,7 @@ export default function HomePage() {
       <HeroSection />
       <WhyChooseUsSection />
       <AboutSnippetSection />
+      <LatestNewsSection />
       <ClientLogosSection />
       <CtaSection />
     </>

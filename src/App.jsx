@@ -10,6 +10,8 @@ import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import PortfolioPage from './pages/PortfolioPage';
 import ContactPage from './pages/ContactPage';
+import BlogPage from './pages/BlogPage';
+import SinglePostPage from './pages/SinglePostPage';
 
 function App() {
   // State untuk tombol scroll ke atas
@@ -36,6 +38,8 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<SinglePostPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
           {/* Floating WhatsApp Button */}

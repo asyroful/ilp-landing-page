@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp, FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 export default function ContactPage() {
+  const { t } = useTranslation();
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
@@ -11,22 +13,22 @@ export default function ContactPage() {
   const contactDetails = [
     {
       icon: <FaMapMarkerAlt size={20} className="text-red-600" />,
-      label: "Alamat Kantor",
+      label: t('contact_page.address_label'),
       value: "Batur, RT.05/RW.09, Batur, Tegalrejo, Kec. Ceper, Kabupaten Klaten, Jawa Tengah 57465"
     },
     {
       icon: <FaPhoneAlt size={20} className="text-red-600" />,
-      label: "Telepon",
+      label: t('contact_page.phone_label'),
       value: "(021) 598-1635"
     },
     {
       icon: <FaWhatsapp size={20} className="text-red-600" />,
-      label: "WhatsApp",
+      label: t('contact_page.whatsapp_label'),
       value: "0812-3456-7890" // Ganti dengan nomor WhatsApp yang benar
     },
     {
       icon: <FaEnvelope size={20} className="text-red-600" />,
-      label: "Email",
+      label: t('contact_page.email_label'),
       value: "marketing@intilogampersada.co.id" // Ganti dengan email yang benar
     }
   ];
@@ -46,7 +48,7 @@ export default function ContactPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          HUBUNGI KAMI
+          {t('contact_page.header_title')}
         </motion.h1>
         <motion.p 
           className="text-gray-600 max-w-2xl mx-auto text-lg"
@@ -54,7 +56,7 @@ export default function ContactPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          Kami siap membantu dan menjawab setiap pertanyaan Anda.
+          {t('contact_page.header_subtitle')}
         </motion.p>
       </header>
       
@@ -65,8 +67,8 @@ export default function ContactPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h2 className="text-3xl font-bold text-gray-800 mb-8">Hubungi Kami</h2>
-            
+            <h2 className="text-3xl font-bold text-gray-800 mb-8">{t('contact_page.info_title')}</h2>
+
             {/* Detail Kontak */}
             <div className="space-y-6 mb-8">
               {contactDetails.map((item, index) => (
@@ -82,7 +84,7 @@ export default function ContactPage() {
 
             {/* Social Media Section */}
             <div className="mb-8">
-                <h3 className="text-lg font-bold text-gray-800 mb-3">Media Sosial Kami</h3>
+                <h3 className="text-lg font-bold text-gray-800 mb-3">{t('contact_page.social_media_title')}</h3>
                 <div className="flex space-x-4">
                     <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-red-600 p-2 bg-gray-100 rounded-full transition-colors duration-300">
                         <FaFacebookF size={20} />
@@ -104,26 +106,26 @@ export default function ContactPage() {
           >
 
             {/* Form Kontak */}
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Kirim Pesan Cepat</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">{t('contact_page.form_title')}</h2>
             <form className="space-y-5">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
-                <input type="text" id="name" name="name" required placeholder="John Doe" className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 transition" />
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">{t('contact_page.form_name')}</label>
+                <input type="text" id="name" name="name" required placeholder={t('contact_page.form_name')} className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 transition" />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                <input type="email" id="email" name="email" required placeholder="anda@email.com" className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 transition" />
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">{t('contact_page.form_email')}</label>
+                <input type="email" id="email" name="email" required placeholder={t('contact_page.form_email')} className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 transition" />
               </div>
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subjek</label>
-                <input type="text" id="subject" name="subject" required placeholder="Contoh: Penawaran Harga Produk" className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 transition" />
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">{t('contact_page.form_subject')}</label>
+                <input type="text" id="subject" name="subject" required placeholder={t('contact_page.form_subject')} className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 transition" />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Pesan</label>
-                <textarea id="message" name="message" rows="4" required placeholder="Tuliskan pesan Anda di sini..." className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 transition"></textarea>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">{t('contact_page.form_message')}</label>
+                <textarea id="message" name="message" rows="4" required placeholder={t('contact_page.form_message')} className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 transition"></textarea>
               </div>
               <button type="submit" className="w-full bg-red-600 text-white py-3 px-4 rounded-md font-bold text-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-all duration-300 shadow-lg hover:shadow-xl">
-                Kirim Pesan
+                {t('contact_page.form_button')}
               </button>
             </form>
           </motion.div>

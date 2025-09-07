@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
@@ -19,6 +20,9 @@ const serviceImages = [
 
 export default function ServicesPage() {
   const { t } = useTranslation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <>
       <Helmet>
@@ -27,7 +31,11 @@ export default function ServicesPage() {
       </Helmet>
 
       <header className="bg-gray-100 py-16 text-center">
-        <h1 className="text-4xl font-bold text-gray-800">{t('services.header', 'Layanan Komprehensif Kami')}</h1>
+        <motion.h1 
+          className="text-4xl font-bold text-gray-800"
+          initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+          {t('services.header')}
+        </motion.h1>
       </header>
 
       <div className="container mx-auto px-4 py-20">

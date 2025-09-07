@@ -4,7 +4,8 @@
     "about": "Tentang Kami",
     "services": "Layanan",
     "portfolio": "Portofolio",
-    "contact": "Hubungi Kami"
+    "contact": "Hubungi Kami",
+    "blog": "Blog"
   },
   "homepage": {
     "hero": {
@@ -97,5 +98,16 @@
     "item4": "Peralatan Medis",
     "item5": "Braket Arsitektur",
     "item6": "Prototipe Kustom"
+  },
+  "blog_page": {
+    "title": "Blog",
+    "description": "Baca artikel dan berita terbaru dari PT Logam Presisi Nusantara.",
+    "header_title": "Blog & Berita Terbaru",
+    "header_subtitle": "Tetap terinformasi dengan wawasan dari industri kami.",
+    "read_more": "Baca Selengkapnya"
+  },
+  "latest_news_section": {
+    "title": "Berita Terbaru",
+    "view_all": "Lihat Semua Berita"
   }
 }

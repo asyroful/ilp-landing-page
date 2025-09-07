@@ -2,9 +2,13 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { FaBullseye, FaFlag } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 export default function AboutPage() {
   const { t } = useTranslation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <>
       <Helmet>

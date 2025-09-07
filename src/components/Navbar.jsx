@@ -13,7 +13,7 @@ export default function Navbar() {
     { title: t('navbar.about'), path: '/about' },
     { title: t('navbar.services'), path: '/services' },
     { title: t('navbar.portfolio'), path: '/portfolio' },
-    { title: t('navbar.contact'), path: '/contact' },
+    { title: t('navbar.blog'), path: '/blog' },
   ];
 
   const contactTitle = t('navbar.contact');
