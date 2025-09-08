@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import PageHeader from '../../components/PageHeader';
 
 export default function ValuesPage() {
   const { t } = useTranslation();
@@ -11,13 +12,7 @@ export default function ValuesPage() {
         <meta name="description" content={t('values.meta')} />
       </Helmet>
       {/* Page Header */}
-      <header className="bg-gray-100 py-16 px-4 text-center">
-        <motion.h1 
-          className="text-3xl md:text-5xl font-bold text-gray-800"
-          initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-          {t('values.title')}
-        </motion.h1>
-      </header>
+      <PageHeader title={t('values.title')} />
       {/* Content Section */}
       <div className="container mx-auto px-4 py-20">
         <motion.div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto"

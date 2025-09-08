@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { FaBullseye, FaFlag } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
+import PageHeader from '../components/PageHeader';
 
 export default function AboutPage() {
   const { t } = useTranslation();
@@ -17,13 +18,7 @@ export default function AboutPage() {
       </Helmet>
 
       {/* Page Header */}
-      <header className="bg-gray-100 py-16 px-4 text-center">
-        <motion.h1 
-          className="text-3xl md:text-5xl font-bold text-gray-800"
-          initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-          {t('about.header')}
-        </motion.h1>
-      </header>
+      <PageHeader title={t('about.header')} />
 
       {/* Content Section */}
       <div className="container mx-auto px-4 py-20">

@@ -5,6 +5,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import logoIlpText from '../assets/logo-ilp-text.png';
+import { productCategories } from '../data/productsData';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,15 +28,11 @@ export default function Navbar() {
     {
       title: t('navbar.products'),
       path: '/products',
-      submenu: [
-        { title: t('navbar.pipe_fittings'), path: '/products/pipe-fittings' },
-        { title: t('navbar.drainage'), path: '/products/drainage' },
-        { title: t('navbar.construction'), path: '/products/construction' },
-        { title: t('navbar.automotive'), path: '/products/automotive' },
-        { title: t('navbar.mining'), path: '/products/mining' },
-        { title: t('navbar.heavy_equipment'), path: '/products/heavy-equipment' },
-        { title: t('navbar.others'), path: '/products/others' },
-      ]
+      submenu: productCategories.map(cat => ({
+        title: t(`navbar.${cat.key}`),
+        path: `/products/${cat.key}`,
+        // subProducts: cat.products // bisa dipakai untuk submenu lebih dalam jika ingin
+      })),
     },
     { title: t('navbar.customers'), path: '/customers' },
     { title: t('navbar.blog'), path: '/blog' },

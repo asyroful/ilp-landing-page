@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import PageHeader from '../../components/PageHeader';
 import { FaBullseye, FaFlag } from 'react-icons/fa';
 
 export default function VisionMissionPage() {
@@ -11,17 +12,7 @@ export default function VisionMissionPage() {
         <title>{t("vision_mission.title")}</title>
         <meta name="description" content={t("vision_mission.meta")} />
       </Helmet>
-      {/* Page Header */}
-      <header className="bg-gray-100 py-16 px-4 text-center">
-        <motion.h1
-          className="text-3xl md:text-5xl font-bold text-gray-800"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          {t("vision_mission.title")}
-        </motion.h1>
-      </header>
+      <PageHeader title={t('vision_mission.title')} />
       {/* Content Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="grid md:grid-cols-2 gap-8">

@@ -7,13 +7,13 @@
     "values": "Nilai Perusahaan",
     "csr": "Program CSR",
     "products": "Produk",
-    "pipe_fittings": "Sambungan Pipa",
+    "pipefittings": "Sambungan Pipa",
     "drainage": "Drainase",
     "construction": "Konstruksi",
     "automotive": "Otomotif",
     "mining": "Pertambangan",
-    "heavy_equipment": "Alat Berat",
-    "others": "Lainnya",
+    "heavyequip": "Alat Berat",
+    "other": "Lainnya",
     "customers": "Customer",
     "blog": "Blog",
     "contact": "Hubungi Kami"
@@ -55,6 +55,14 @@
     "address": "Jl. Industri Raya No. 123, Tangerang Selatan, Banten",
     "email": "Email",
     "phone": "Telepon"
+  },
+  "products_page": {
+    "intro": "Jelajahi kategori produk kami dan temukan solusi terbaik untuk kebutuhan Anda.",
+    "all": "Semua Produk",
+    "back": "Kembali ke Produk",
+    "interested": "Tertarik dengan:",
+    "order_info": "Anda dapat melakukan pemesanan dengan menghubungi kami di bawah ini:",
+    "button_view": "Lihat Detail"
   },
   "contact_page": {
     "header_title": "HUBUNGI KAMI",

@@ -1,6 +1,14 @@
+
 import { NavLink } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+// Sinkronisasi menu Footer dengan Navbar
+const navLinks = [
+  { key: 'about', to: '/about' }, 
+  { key: 'customers', to: '/customers' },
+  { key: 'blog', to: '/blog' },
+  { key: 'contact', to: '/contact' },
+];
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -25,10 +33,13 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('footer.navigation')}</h3>
             <ul className="space-y-2">
-              <li><NavLink to="/about" className="text-white hover:text-white">{t('navbar.about')}</NavLink></li>
-              <li><NavLink to="/services" className="text-white hover:text-white">{t('navbar.services')}</NavLink></li>
-              <li><NavLink to="/portfolio" className="text-white hover:text-white">{t('navbar.portfolio')}</NavLink></li>
-              <li><NavLink to="/contact" className="text-white hover:text-white">{t('navbar.contact')}</NavLink></li>
+              {navLinks.map(link => (
+                <li key={link.key}>
+                  <NavLink to={link.to} className="text-white hover:text-white">
+                    {t(`navbar.${link.key}`)}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </div>
 

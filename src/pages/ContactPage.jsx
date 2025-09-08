@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp, FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import PageHeader from '../components/PageHeader';
 
 export default function ContactPage() {
   const { t } = useTranslation();
@@ -41,24 +42,7 @@ export default function ContactPage() {
       </Helmet>
       
       {/* Header Section */}
-      <header className="bg-gray-50 py-16 text-center">
-        <motion.h1 
-          className="text-3xl md:text-5xl font-extrabold text-gray-800 mb-3"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          {t('contact_page.header_title')}
-        </motion.h1>
-        <motion.p 
-          className="text-gray-600 max-w-2xl mx-auto text-lg"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-        >
-          {t('contact_page.header_subtitle')}
-        </motion.p>
-      </header>
+      <PageHeader title={t('contact_page.header_title')} subtitle={t('contact_page.header_subtitle')} />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16">

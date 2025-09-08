@@ -5,6 +5,7 @@ import { FaArrowRight, FaCog, FaShieldAlt, FaTruck, FaMedal, FaUsers, FaDrafting
 import { useTranslation } from 'react-i18next';
 import { useEffect, useRef } from 'react';
 import { blogPosts } from '../data/blogData';
+import BlogCard from '../components/BlogCard';
 
 // --- SUB-KOMPONEN UNTUK KERAPIAN ---
 
@@ -212,33 +213,7 @@ const LatestNewsSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">{t('latest_news_section.title')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {latestPosts.map((post, index) => (
-            <motion.div
-              key={post.slug}
-              className="bg-white rounded-lg shadow-lg overflow-hidden group"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -10, boxShadow: '0 25px 50px -12px rgb(0 0 0 / 0.25)' }}
-            >
-              <Link to={`/blog/${post.slug}`}>
-                <div className="overflow-hidden h-56">
-                  <img
-                    src={post.thumbnail}
-                    alt={post.title[currentLang]}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <p className="text-sm text-gray-500 mb-2">{post.date} • {post.author}</p>
-                  <h3 className="text-lg font-bold text-gray-800 mb-3 h-16">{post.title[currentLang]}</h3>
-                  <div className="text-lg text-gray-600 mb-4">{post.excerpt[currentLang]}</div>
-                  <span className="font-bold text-red-600 group-hover:underline">
-                    {t('blog_page.read_more')}
-                  </span>
-                </div>
-              </Link>
-            </motion.div>
+            <BlogCard key={post.slug} post={post} index={index} currentLang={currentLang} variant="compact" />
           ))}
         </div>
         <div className="text-center mt-12">

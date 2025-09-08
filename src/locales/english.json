@@ -7,13 +7,13 @@
     "values": "Company Values",
     "csr": "CSR Program",
     "products": "Products",
-    "pipe_fittings": "Pipe Fittings",
+    "pipefittings": "Pipe Fittings",
     "drainage": "Drainage",
     "construction": "Construction",
     "automotive": "Automotive",
     "mining": "Mining",
-    "heavy_equipment": "Heavy Equipment",
-    "others": "Others",
+    "heavyequip": "Heavy Equipment",
+    "other": "Others",
     "customers": "Customers",
     "blog": "Blog",
     "contact": "Contact Us"
@@ -55,6 +55,14 @@
     "address": "Jl. Industri Raya No. 123, South Tangerang, Banten",
     "email": "Email",
     "phone": "Phone"
+  },
+  "products_page": {
+    "intro": "Explore our product categories and find the right solution for your needs.",
+    "all": "All Products",
+    "back": "Back to Products",
+    "interested": "Interested in:",
+    "order_info": "You can place an order by contacting us below:",
+    "button_view": "View Details"
   },
   "contact_page": {
     "header_title": "CONTACT US",

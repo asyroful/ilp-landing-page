@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import PageHeader from '../components/PageHeader';
 
 const customers = [
   { name: 'PDAM', logo: 'https://asset.kompas.com/crops/0Qn6QnQnQnQnQnQnQnQnQnQnQnQ=/0x0:0x0/750x500/data/photo/2021/07/01/60ddc7e2b7b7b.png' },
@@ -22,13 +23,7 @@ export default function CustomersPage() {
         <meta name="description" content={t('customers.meta')} />
       </Helmet>
       {/* Page Header */}
-      <header className="bg-gray-100 py-16 px-4 text-center">
-        <motion.h1 
-          className="text-3xl md:text-5xl font-bold text-gray-800"
-          initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-          {t('customers.title')}
-        </motion.h1>
-      </header>
+      <PageHeader title={t('customers.title')} />
       {/* Content Section */}
       <div className="container mx-auto px-4 py-20">
         <motion.div className="max-w-2xl mx-auto mb-12"

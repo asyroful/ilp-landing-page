@@ -18,13 +18,8 @@ import VisionMissionPage from './pages/about/VisionMissionPage';
 import ValuesPage from './pages/about/ValuesPage';
 import CsrPage from './pages/about/CsrPage';
 // Products subpages
-import PipeFittingsPage from './pages/products/PipeFittingsPage';
-import DrainagePage from './pages/products/DrainagePage';
-import ConstructionPage from './pages/products/ConstructionPage';
-import AutomotivePage from './pages/products/AutomotivePage';
-import MiningPage from './pages/products/MiningPage';
-import HeavyEquipmentPage from './pages/products/HeavyEquipmentPage';
-import OthersPage from './pages/products/OthersPage';
+import ProductDetailPage from './pages/products/ProductDetailPage';
+import ProductsPage from './pages/products/ProductsPage';
 // Customers
 import CustomersPage from './pages/CustomersPage';
 
@@ -55,13 +50,9 @@ function App() {
             <Route path="/about/vision-mission" element={<VisionMissionPage />} />
             <Route path="/about/values" element={<ValuesPage />} />
             <Route path="/about/csr" element={<CsrPage />} />
-            <Route path="/products/pipe-fittings" element={<PipeFittingsPage />} />
-            <Route path="/products/drainage" element={<DrainagePage />} />
-            <Route path="/products/construction" element={<ConstructionPage />} />
-            <Route path="/products/automotive" element={<AutomotivePage />} />
-            <Route path="/products/mining" element={<MiningPage />} />
-            <Route path="/products/heavy-equipment" element={<HeavyEquipmentPage />} />
-            <Route path="/products/others" element={<OthersPage />} />
+            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/products/:category" element={<ProductsPage />} />
+            <Route path="/products/:category/:slug" element={<ProductDetailPage />} />
             <Route path="/customers" element={<CustomersPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
