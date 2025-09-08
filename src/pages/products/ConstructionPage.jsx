@@ -26,8 +26,7 @@ export default function ConstructionPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('construction.title')}</h2>
             <div className="text-lg text-gray-600 leading-relaxed space-y-4">
-              <p>We provide high-quality construction materials and solutions to support your building projects. Our products are trusted by professionals for their strength and reliability.</p>
-              <p>From foundation to finishing, we ensure every product meets strict standards for safety and performance.</p>
+              <p>{t('construction.desc')}</p>
             </div>
           </div>
         </motion.div>

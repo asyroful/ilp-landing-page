@@ -26,8 +26,7 @@ export default function PipeFittingsPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('pipe_fittings.title')}</h2>
             <div className="text-lg text-gray-600 leading-relaxed space-y-4">
-              <p>Our pipe fittings are manufactured with high precision and durability, suitable for industrial, construction, and infrastructure needs. We offer a wide range of sizes and types to meet your project requirements.</p>
-              <p>Each product undergoes strict quality control to ensure leak-proof performance and long service life, making it the right choice for your piping systems.</p>
+              <p>{t('pipe_fittings.desc')}</p>
             </div>
           </div>
         </motion.div>

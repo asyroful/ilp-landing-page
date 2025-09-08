@@ -24,10 +24,6 @@ export default function ValuesPage() {
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
           <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('values.title')}</h2>
           <div className="text-lg text-gray-600 leading-relaxed mb-4">{t('values.desc')}</div>
-          <ul className="list-disc list-inside text-gray-600 space-y-2">
-            <li>Integritas dan profesionalisme dalam setiap layanan.</li>
-            <li>Inovasi berkelanjutan dan kepuasan pelanggan.</li>
-          </ul>
         </motion.div>
       </div>
     </>

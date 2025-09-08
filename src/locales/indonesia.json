@@ -36,7 +36,7 @@
     },
     "about_snippet": {
       "title": "Lebih dari 15 Tahun Melayani Industri",
-      "description": "PT Logam Presisi Nusantara adalah mitra terpercaya Anda dalam penyediaan komponen logam presisi. Sejak 2008, kami telah mendedikasikan diri untuk memberikan solusi manufaktur terbaik.",
+      "description": "PT Inti Logam Persada adalah mitra terpercaya Anda dalam penyediaan komponen logam presisi. Sejak 2008, kami telah mendedikasikan diri untuk memberikan solusi manufaktur terbaik.",
       "button": "Profil Perusahaan"
     },
     "clients": {
@@ -112,7 +112,7 @@
   },
   "blog_page": {
     "title": "Blog",
-    "description": "Baca artikel dan berita terbaru dari PT Logam Presisi Nusantara.",
+    "description": "Baca artikel dan berita terbaru dari PT Inti Logam Persada.",
     "header_title": "Blog & Berita Terbaru",
     "header_subtitle": "Tetap terinformasi dengan wawasan dari industri kami.",
     "read_more": "Baca Selengkapnya"
@@ -139,7 +139,9 @@
   "csr": {
     "title": "Program CSR",
     "meta": "Komitmen kami terhadap tanggung jawab sosial dan lingkungan.",
-    "desc": "Kami berkomitmen untuk berkontribusi kepada masyarakat dan mendukung pembangunan berkelanjutan melalui berbagai inisiatif CSR."
+    "desc": "Kami berkomitmen untuk berkontribusi kepada masyarakat dan mendukung pembangunan berkelanjutan melalui berbagai inisiatif CSR.",
+    "item1": "Program sosial untuk masyarakat sekitar pabrik.",
+    "item2": "Inisiatif lingkungan dan edukasi berkelanjutan."
   },
   "pipe_fittings": {
     "title": "Sambungan Pipa",

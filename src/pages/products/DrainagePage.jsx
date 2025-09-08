@@ -26,8 +26,7 @@ export default function DrainagePage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('drainage.title')}</h2>
             <div className="text-lg text-gray-600 leading-relaxed space-y-4">
-              <p>Our drainage solutions are engineered for optimal flow and durability. Suitable for industrial, commercial, and public infrastructure projects.</p>
-              <p>We use corrosion-resistant materials and innovative designs to ensure long-lasting performance in various environments.</p>
+              <p>{t('drainage.desc')}</p>
             </div>
           </div>
         </motion.div>

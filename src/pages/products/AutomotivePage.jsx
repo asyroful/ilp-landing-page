@@ -26,8 +26,7 @@ export default function AutomotivePage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('automotive.title')}</h2>
             <div className="text-lg text-gray-600 leading-relaxed space-y-4">
-              <p>Our automotive products are designed for performance and reliability, supporting a wide range of vehicle applications.</p>
-              <p>We use advanced materials and technology to ensure every component meets the highest industry standards.</p>
+              <p>{t('automotive.desc')}</p>
             </div>
           </div>
         </motion.div>

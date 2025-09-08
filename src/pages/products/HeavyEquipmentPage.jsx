@@ -26,8 +26,7 @@ export default function HeavyEquipmentPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('heavy_equipment.title')}</h2>
             <div className="text-lg text-gray-600 leading-relaxed space-y-4">
-              <p>Our heavy equipment products are engineered for power and reliability, supporting large-scale industrial and construction projects.</p>
-              <p>We prioritize safety, efficiency, and ease of maintenance in every machine we deliver.</p>
+              <p>{t('heavy_equipment.desc')}</p>
             </div>
           </div>
         </motion.div>

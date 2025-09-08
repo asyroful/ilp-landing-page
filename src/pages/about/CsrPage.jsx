@@ -25,8 +25,8 @@ export default function CsrPage() {
           <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('csr.title')}</h2>
           <div className="text-lg text-gray-600 leading-relaxed mb-4">{t('csr.desc')}</div>
           <ul className="list-disc list-inside text-gray-600 space-y-2">
-            <li>Program sosial untuk masyarakat sekitar pabrik.</li>
-            <li>Inisiatif lingkungan dan edukasi berkelanjutan.</li>
+            <li>{t('csr.item1')}</li>
+            <li>{t('csr.item2')}</li>
           </ul>
         </motion.div>
       </div>

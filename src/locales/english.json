@@ -36,7 +36,7 @@
     },
     "about_snippet": {
       "title": "Over 15 Years Serving the Industry",
-      "description": "PT Logam Presisi Nusantara is your trusted partner in providing precision metal components. Since 2008, we have dedicated ourselves to delivering the best manufacturing solutions.",
+      "description": "PT Inti Logam Persada is your trusted partner in providing precision metal components. Since 2008, we have dedicated ourselves to delivering the best manufacturing solutions.",
       "button": "Company Profile"
     },
     "clients": {
@@ -112,7 +112,7 @@
   },
   "blog_page": {
     "title": "Blog",
-    "description": "Read the latest articles and news from PT Logam Presisi Nusantara.",
+    "description": "Read the latest articles and news from PT Inti Logam Persada.",
     "header_title": "Blog & Latest News",
     "header_subtitle": "Stay informed with insights from our industry.",
     "read_more": "Read More"
@@ -139,7 +139,9 @@
   "csr": {
     "title": "CSR Program",
     "meta": "Our commitment to social and environmental responsibility.",
-    "desc": "We are committed to giving back to the community and supporting sustainable development through various CSR initiatives."
+    "desc": "We are committed to giving back to the community and supporting sustainable development through various CSR initiatives.",
+    "item1": "Social programs for communities around the factory.",
+    "item2": "Environmental initiatives and sustainable education."
   },
   "pipe_fittings": {
     "title": "Pipe Fittings",

@@ -26,8 +26,7 @@ export default function OthersPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('others.title')}</h2>
             <div className="text-lg text-gray-600 leading-relaxed space-y-4">
-              <p>We also offer a variety of other products to meet your unique needs, from specialty components to custom solutions.</p>
-              <p>Contact us to discuss your requirements and discover how we can support your projects with innovative and reliable products.</p>
+              <p>{t('others.desc')}</p>
             </div>
           </div>
         </motion.div>
