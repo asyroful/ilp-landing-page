@@ -1,4 +1,9 @@
 # File: netlify.toml
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 
 [build]
   # Perintah untuk membangun situs Anda
