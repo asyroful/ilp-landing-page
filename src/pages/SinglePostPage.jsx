@@ -34,8 +34,8 @@ export default function SinglePostPage() {
             Kembali ke Semua Artikel
           </Link>
           
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">{post.title[currentLang]}</h1>
-          <p className="text-gray-500 mb-8">{post.date} by {post.author}</p>
+          <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">{post.title[currentLang]}</h1>
+          <div className="text-lg text-gray-500 mb-8">{post.date} by {post.author}</div>
           
           <img src={post.thumbnail} alt={post.title[currentLang]} className="w-full h-auto rounded-lg shadow-lg mb-8" />
           

@@ -17,9 +17,9 @@ export default function AboutPage() {
       </Helmet>
 
       {/* Page Header */}
-      <header className="bg-gray-100 py-16 text-center">
+      <header className="bg-gray-100 py-16 px-4 text-center">
         <motion.h1 
-          className="text-4xl font-bold text-gray-800"
+          className="text-3xl md:text-5xl font-bold text-gray-800"
           initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           {t('about.header')}
         </motion.h1>
@@ -33,9 +33,9 @@ export default function AboutPage() {
           <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974" alt="Tim Profesional" className="rounded-lg shadow-xl"/>
           <div>
             <h2 className="text-3xl font-bold text-gray-800 mb-4">{t('about.history_title', 'Perjalanan Kami')}</h2>
-            <p className="text-gray-600 leading-relaxed">
+            <div className="text-lg text-gray-600 leading-relaxed">
               {t('about.history_desc')}
-            </p>
+            </div>
           </div>
         </motion.div>
 
@@ -47,7 +47,7 @@ export default function AboutPage() {
               <FaFlag size={28} className="mr-3" />
               <h3 className="text-2xl font-bold">{t('about.vision_title')}</h3>
             </div>
-            <p className="text-gray-600">{t('about.vision_desc')}</p>
+            <div className="text-lg text-gray-600">{t('about.vision_desc')}</div>
           </motion.div>
           <motion.div className="bg-white p-8 rounded-lg shadow-lg"
             initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>

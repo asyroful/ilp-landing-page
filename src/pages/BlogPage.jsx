@@ -20,9 +20,23 @@ export default function BlogPage() {
         <meta name="description" content={t('blog_page.description')} />
       </Helmet>
 
-      <header className="bg-gray-100 py-16 text-center">
-        <h1 className="text-4xl font-bold text-gray-800">{t('blog_page.header_title')}</h1>
-        <p className="text-gray-600 mt-2">{t('blog_page.header_subtitle')}</p>
+      <header className="bg-gray-100 py-16 px-4 text-center">
+        <motion.h1
+          className="text-3xl md:text-5xl font-bold text-gray-800"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          {t('blog_page.header_title')}
+        </motion.h1>
+        <motion.div
+          className="text-lg text-gray-600 mt-2"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          {t('blog_page.header_subtitle')}
+        </motion.div>
       </header>
 
       <div className="container mx-auto px-4 py-20">
@@ -44,7 +58,7 @@ export default function BlogPage() {
                 <div className="p-6">
                   <p className="text-sm text-gray-500 mb-2">{post.date} • {post.author}</p>
                   <h2 className="text-xl font-bold text-gray-800 mb-3 h-20">{post.title[currentLang]}</h2>
-                  <p className="text-gray-600 mb-4">{post.excerpt[currentLang]}</p>
+                  <div className="text-lg text-gray-600 mb-4">{post.excerpt[currentLang]}</div>
                   <span className="font-bold text-blue-600 group-hover:underline">
                     {t('blog_page.read_more')}
                   </span>

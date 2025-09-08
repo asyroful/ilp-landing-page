@@ -12,6 +12,21 @@ import PortfolioPage from './pages/PortfolioPage';
 import ContactPage from './pages/ContactPage';
 import BlogPage from './pages/BlogPage';
 import SinglePostPage from './pages/SinglePostPage';
+// About subpages
+import ProfilePage from './pages/about/ProfilePage';
+import VisionMissionPage from './pages/about/VisionMissionPage';
+import ValuesPage from './pages/about/ValuesPage';
+import CsrPage from './pages/about/CsrPage';
+// Products subpages
+import PipeFittingsPage from './pages/products/PipeFittingsPage';
+import DrainagePage from './pages/products/DrainagePage';
+import ConstructionPage from './pages/products/ConstructionPage';
+import AutomotivePage from './pages/products/AutomotivePage';
+import MiningPage from './pages/products/MiningPage';
+import HeavyEquipmentPage from './pages/products/HeavyEquipmentPage';
+import OthersPage from './pages/products/OthersPage';
+// Customers
+import CustomersPage from './pages/CustomersPage';
 
 function App() {
   // State untuk tombol scroll ke atas
@@ -36,6 +51,18 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/about/profile" element={<ProfilePage />} />
+            <Route path="/about/vision-mission" element={<VisionMissionPage />} />
+            <Route path="/about/values" element={<ValuesPage />} />
+            <Route path="/about/csr" element={<CsrPage />} />
+            <Route path="/products/pipe-fittings" element={<PipeFittingsPage />} />
+            <Route path="/products/drainage" element={<DrainagePage />} />
+            <Route path="/products/construction" element={<ConstructionPage />} />
+            <Route path="/products/automotive" element={<AutomotivePage />} />
+            <Route path="/products/mining" element={<MiningPage />} />
+            <Route path="/products/heavy-equipment" element={<HeavyEquipmentPage />} />
+            <Route path="/products/others" element={<OthersPage />} />
+            <Route path="/customers" element={<CustomersPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/blog" element={<BlogPage />} />

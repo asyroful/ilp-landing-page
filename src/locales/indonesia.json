@@ -2,10 +2,21 @@
   "navbar": {
     "home": "Beranda",
     "about": "Tentang Kami",
-    "services": "Layanan",
-    "portfolio": "Portofolio",
-    "contact": "Hubungi Kami",
-    "blog": "Blog"
+    "profile": "Profil Perusahaan",
+    "vision_mission": "Visi & Misi",
+    "values": "Nilai Perusahaan",
+    "csr": "Program CSR",
+    "products": "Produk",
+    "pipe_fittings": "Sambungan Pipa",
+    "drainage": "Drainase",
+    "construction": "Konstruksi",
+    "automotive": "Otomotif",
+    "mining": "Pertambangan",
+    "heavy_equipment": "Alat Berat",
+    "others": "Lainnya",
+    "customers": "Customer",
+    "blog": "Blog",
+    "contact": "Hubungi Kami"
   },
   "homepage": {
     "hero": {
@@ -109,5 +120,65 @@
   "latest_news_section": {
     "title": "Berita Terbaru",
     "view_all": "Lihat Semua Berita"
+  },
+  "profile": {
+    "title": "Profil Perusahaan",
+    "meta": "Pelajari lebih lanjut tentang profil, sejarah, dan pencapaian perusahaan kami.",
+    "desc": "PT Inti Logam Persada adalah perusahaan manufaktur logam terkemuka yang berkomitmen pada kualitas, inovasi, dan kepuasan pelanggan."
+  },
+  "vision_mission": {
+    "title": "Visi & Misi",
+    "meta": "Temukan visi dan misi kami sebagai mitra manufaktur terpercaya.",
+    "desc": "Visi kami adalah menjadi mitra terbaik di industri logam. Misi kami adalah memberikan produk dan layanan berkualitas tinggi melalui perbaikan dan inovasi berkelanjutan."
+  },
+  "values": {
+    "title": "Nilai Perusahaan",
+    "meta": "Nilai-nilai inti yang membentuk budaya dan layanan perusahaan kami.",
+    "desc": "Integritas, profesionalisme, inovasi, dan fokus pada pelanggan adalah nilai-nilai utama yang membimbing setiap aspek bisnis kami."
+  },
+  "csr": {
+    "title": "Program CSR",
+    "meta": "Komitmen kami terhadap tanggung jawab sosial dan lingkungan.",
+    "desc": "Kami berkomitmen untuk berkontribusi kepada masyarakat dan mendukung pembangunan berkelanjutan melalui berbagai inisiatif CSR."
+  },
+  "pipe_fittings": {
+    "title": "Sambungan Pipa",
+    "meta": "Jelajahi berbagai sambungan pipa berkualitas tinggi untuk berbagai industri.",
+    "desc": "Kami menyediakan sambungan pipa yang tahan lama dan presisi untuk kebutuhan industri, konstruksi, dan infrastruktur."
+  },
+  "drainage": {
+    "title": "Drainase",
+    "meta": "Solusi drainase untuk proyek industri dan infrastruktur.",
+    "desc": "Produk drainase kami dirancang untuk aliran optimal dan performa tahan lama di berbagai lingkungan."
+  },
+  "construction": {
+    "title": "Konstruksi",
+    "meta": "Produk dan solusi logam untuk proyek konstruksi.",
+    "desc": "Kami mendukung proyek konstruksi dengan komponen logam yang andal dan solusi kustom."
+  },
+  "automotive": {
+    "title": "Otomotif",
+    "meta": "Komponen logam otomotif dan solusi industri otomotif.",
+    "desc": "Menyuplai komponen logam presisi untuk industri otomotif dengan standar kualitas tinggi."
+  },
+  "mining": {
+    "title": "Pertambangan",
+    "meta": "Produk logam untuk kebutuhan industri pertambangan.",
+    "desc": "Produk kami dibuat untuk menghadapi kondisi berat di sektor pertambangan."
+  },
+  "heavy_equipment": {
+    "title": "Alat Berat",
+    "meta": "Komponen dan solusi untuk manufaktur alat berat.",
+    "desc": "Kami memproduksi suku cadang yang kokoh dan andal untuk alat berat dan mesin industri."
+  },
+  "others": {
+    "title": "Lainnya",
+    "meta": "Produk logam lain dan solusi kustom.",
+    "desc": "Kami juga menyediakan produk logam kustom sesuai kebutuhan spesifik Anda."
+  },
+  "customers": {
+    "title": "Customer",
+    "meta": "Daftar pelanggan dan portofolio klien kami.",
+    "desc": "Kami dipercaya oleh perusahaan-perusahaan terkemuka dari berbagai industri sebagai mitra manufaktur mereka."
   }
 }

@@ -36,7 +36,7 @@ const HeroSection = () => {
           hidden: { opacity: 0 },
           visible: { opacity: 1, transition: { staggerChildren: 0.3 } }
       }}>
-        <motion.h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-white" variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition:{duration: 0.8} } }}>
+        <motion.h1 className="text-3xl md:text-5xl font-extrabold mb-4 text-white" variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition:{duration: 0.8} } }}>
           {t('homepage.hero.title')}
         </motion.h1>
         <motion.p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-200" variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition:{duration: 0.8} } }}>
@@ -82,7 +82,7 @@ const WhyChooseUsSection = () => {
     <section id="why-us" className="py-20 bg-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">{t('homepage.why_us.title')}</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-12">{t('homepage.why_us.subtitle')}</p>
+        <div className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">{t('homepage.why_us.subtitle')}</div>
         
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
@@ -95,7 +95,7 @@ const WhyChooseUsSection = () => {
             <motion.div key={index} className="p-8 rounded-lg shadow-lg bg-gray-50 text-center" variants={itemVariants}>
               <div className="text-red-600 mb-4 inline-block">{feature.icon}</div>
               <h3 className="text-xl font-bold mb-3 text-gray-800">{feature.title}</h3>
-              <p className="text-gray-600">{feature.desc}</p>
+              <div className="text-lg text-gray-600">{feature.desc}</div>
             </motion.div>
           ))}
         </motion.div>
@@ -129,7 +129,7 @@ const AboutSnippetSection = () => {
           </div>
           <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeInOut" }}>
             <h2 className="text-3xl font-bold text-gray-800 mb-4">{t('homepage.about_snippet.title')}</h2>
-            <p className="text-gray-600 leading-relaxed mb-6">{t('homepage.about_snippet.description')}</p>
+            <div className="text-lg text-gray-600 leading-relaxed mb-6">{t('homepage.about_snippet.description')}</div>
             <Link to="/about" className="inline-flex items-center bg-red-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-red-700 transition-colors">
               {t('homepage.about_snippet.button')} <FaArrowRight className="ml-2" />
             </Link>
@@ -232,7 +232,7 @@ const LatestNewsSection = () => {
                 <div className="p-6">
                   <p className="text-sm text-gray-500 mb-2">{post.date} • {post.author}</p>
                   <h3 className="text-lg font-bold text-gray-800 mb-3 h-16">{post.title[currentLang]}</h3>
-                  <p className="text-gray-600 mb-4">{post.excerpt[currentLang]}</p>
+                  <div className="text-lg text-gray-600 mb-4">{post.excerpt[currentLang]}</div>
                   <span className="font-bold text-red-600 group-hover:underline">
                     {t('blog_page.read_more')}
                   </span>

@@ -25,9 +25,9 @@ export default function PortfolioPage() {
         <meta name="description" content={t('portfolio.meta', 'Lihat galeri proyek sukses kami di berbagai industri.')} />
       </Helmet>
 
-      <header className="bg-gray-100 py-16 text-center">
+      <header className="bg-gray-100 py-16 px-4 text-center">
         <motion.h1 
-          className="text-4xl font-bold text-gray-800"
+          className="text-3xl md:text-5xl font-bold text-gray-800"
           initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           {t('portfolio.header')}
         </motion.h1>

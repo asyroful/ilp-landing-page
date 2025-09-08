@@ -2,10 +2,21 @@
   "navbar": {
     "home": "Home",
     "about": "About Us",
-    "services": "Services",
-    "portfolio": "Portfolio",
-    "contact": "Contact Us",
-    "blog": "Blog"
+    "profile": "Company Profile",
+    "vision_mission": "Vision & Mission",
+    "values": "Company Values",
+    "csr": "CSR Program",
+    "products": "Products",
+    "pipe_fittings": "Pipe Fittings",
+    "drainage": "Drainage",
+    "construction": "Construction",
+    "automotive": "Automotive",
+    "mining": "Mining",
+    "heavy_equipment": "Heavy Equipment",
+    "others": "Others",
+    "customers": "Customers",
+    "blog": "Blog",
+    "contact": "Contact Us"
   },
   "homepage": {
     "hero": {
@@ -109,5 +120,65 @@
   "latest_news_section": {
     "title": "Latest News",
     "subtitle": "Stay updated with the latest insights and articles from our industry experts."
+  },
+  "profile": {
+    "title": "Company Profile",
+    "meta": "Learn more about our company profile, history, and achievements.",
+    "desc": "PT Inti Logam Persada is a leading metal manufacturing company with a strong commitment to quality, innovation, and customer satisfaction."
+  },
+  "vision_mission": {
+    "title": "Vision & Mission",
+    "meta": "Discover our vision and mission as a trusted manufacturing partner.",
+    "desc": "Our vision is to be the best partner in the metal industry. Our mission is to deliver high-quality products and services through continuous improvement and innovation."
+  },
+  "values": {
+    "title": "Company Values",
+    "meta": "Our core values that drive our company culture and service.",
+    "desc": "Integrity, professionalism, innovation, and customer focus are the core values that guide every aspect of our business."
+  },
+  "csr": {
+    "title": "CSR Program",
+    "meta": "Our commitment to social and environmental responsibility.",
+    "desc": "We are committed to giving back to the community and supporting sustainable development through various CSR initiatives."
+  },
+  "pipe_fittings": {
+    "title": "Pipe Fittings",
+    "meta": "Explore our range of high-quality pipe fittings for various industries.",
+    "desc": "We provide durable and precise pipe fittings for industrial, construction, and infrastructure needs."
+  },
+  "drainage": {
+    "title": "Drainage",
+    "meta": "Drainage solutions for industrial and infrastructure projects.",
+    "desc": "Our drainage products are designed for optimal flow and long-lasting performance in various environments."
+  },
+  "construction": {
+    "title": "Construction",
+    "meta": "Metal products and solutions for construction projects.",
+    "desc": "We support construction projects with reliable metal components and custom solutions."
+  },
+  "automotive": {
+    "title": "Automotive",
+    "meta": "Automotive metal parts and solutions.",
+    "desc": "Supplying precision metal parts for the automotive industry with strict quality standards."
+  },
+  "mining": {
+    "title": "Mining",
+    "meta": "Metal products for mining industry needs.",
+    "desc": "Our products are built to withstand the demanding conditions of the mining sector."
+  },
+  "heavy_equipment": {
+    "title": "Heavy Equipment",
+    "meta": "Components and solutions for heavy equipment manufacturing.",
+    "desc": "We manufacture robust and reliable parts for heavy equipment and machinery."
+  },
+  "others": {
+    "title": "Others",
+    "meta": "Other metal products and custom solutions.",
+    "desc": "We also provide custom metal products tailored to your specific requirements."
+  },
+  "customers": {
+    "title": "Customers",
+    "meta": "Our valued customers and client portfolio.",
+    "desc": "We are trusted by leading companies from various industries as their manufacturing partner."
   }
 }
