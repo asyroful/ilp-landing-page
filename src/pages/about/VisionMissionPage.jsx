@@ -46,6 +46,8 @@ export default function VisionMissionPage() {
               <li>{t("about.mission_1")}</li>
               <li>{t("about.mission_2")}</li>
               <li>{t("about.mission_3")}</li>
+              <li>{t("about.mission_4")}</li>
+              <li>{t("about.mission_5")}</li>
             </ul>
           </motion.div>
         </div>

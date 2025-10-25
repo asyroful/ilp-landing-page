@@ -35,8 +35,8 @@
       "feature3_desc": "Adopting the latest machinery and software for precise results."
     },
     "about_snippet": {
-      "title": "Over 15 Years Serving the Industry",
-      "description": "PT Inti Logam Persada is your trusted partner in providing precision metal components. Since 2008, we have dedicated ourselves to delivering the best manufacturing solutions.",
+      "title": "Over 25 Years Serving the Industry",
+      "description": "CV Inti Logam Persada is an experienced metal casting company, committed to quality, innovation, and customer satisfaction across various industries.",
       "button": "Company Profile"
     },
     "clients": {
@@ -52,7 +52,7 @@
     "description": "The leading metal manufacturing solution that prioritizes quality, precision, and innovation to meet global industry needs.",
     "navigation": "Navigation",
     "contact_us": "Contact Us",
-    "address": "Jl. Industri Raya No. 123, South Tangerang, Banten",
+    "address": "Batur, RT.05/RW.09, Batur, Tegalrejo, Kec. Ceper, Kabupaten Klaten, Jawa Tengah 57465",
     "email": "Email",
     "phone": "Phone"
   },
@@ -60,9 +60,11 @@
     "intro": "Explore our product categories and find the right solution for your needs.",
     "all": "All Products",
     "back": "Back to Products",
-    "interested": "Interested in:",
+    "interested": "Interested in",
     "order_info": "You can place an order by contacting us below:",
-    "button_view": "View Details"
+    "button_view": "View Details",
+    "button_whatsapp": "WhatsApp us",
+    "button_email": "Email us"
   },
   "contact_page": {
     "header_title": "CONTACT US",
@@ -86,13 +88,15 @@
     "meta": "Learn more about the history, vision, and mission of PT Inti Logam Persada in the metal manufacturing industry.",
     "header": "About PT Inti Logam Persada",
     "history_title": "Our Journey",
-    "history_desc": "Founded in 2010, PT Inti Logam Persada started as a small workshop with a big vision to become a leader in the metal manufacturing industry. With dedication to quality and technology adoption, we have transformed into a trusted company serving national and international clients.",
+    "history_desc": "CV Inti Logam Persada is a company engaged in manufacturing and casting of Grey Cast Iron and Ductile Iron since 1997, located in Klaten, Central Java. The company focuses on the pipe fittings industry but also provides other products according to customer needs. For nearly 28 years, CV Inti Logam Persada has contributed to government programs through state-owned and private companies in building infrastructure and the economy in Indonesia, as well as meeting the needs of various industries.\n\nIn addition to focusing on product quality, we also care about the environment and surrounding communities. Through our CSR programs, we are committed to contributing to sustainable development and the welfare of communities around our operational locations.\n\nAs part of the manufacturing and casting industry in Indonesia, we are proud to play a role in building the nation's infrastructure and supporting national economic growth. We hope to continue collaborating with business partners, the government, and society to create a better future for Indonesia.",
     "vision_title": "Our Vision",
-    "vision_desc": "To become the leading choice for metal manufacturing in Southeast Asia, known for innovation, quality, and reliability.",
+    "vision_desc": "To become a trusted, competent, high-quality, and satisfying metal casting company.",
     "mission_title": "Our Mission",
-    "mission_1": "Consistently provide high-quality products.",
-    "mission_2": "Invest in technology and human resources.",
-    "mission_3": "Build long-term partnerships with customers."
+    "mission_1": "Provide high-quality products.",
+    "mission_2": "Implement good management systems.",
+    "mission_3": "Commit to continuous improvement.",
+    "mission_4": "Maintain customer trust and satisfaction.",
+    "mission_5": "Make a positive impact on the surrounding environment."
   },
   "services": {
     "title": "Our Services - PT Inti Logam Persada",
@@ -142,12 +146,12 @@
   "values": {
     "title": "Company Values",
     "meta": "Our core values that drive our company culture and service.",
-    "desc": "Integrity, professionalism, innovation, and customer focus are the core values that guide every aspect of our business."
+  "desc": "We have a tagline: \"Your Company Partner\" which means as a company we aim for a good and long-term relationship and to continuously meet every customer need. To achieve this, CV Inti Logam Persada upholds the following company values:\n\n1. Solution-Oriented\nWe are ready to find the best solutions for every challenge and are determined to provide effective and efficient solutions for our customers.\n\n2. Collaborative\nIn every project, we encourage close collaboration between our internal team, partners, and customers.\n\n3. Innovative\nWe continuously foster creativity and dare to think \"out of the box\" to create superior and relevant products and services.\n\n4. Committed\nWe place customer needs as our top priority and are committed to always providing the best products and services for our partners and customers."
   },
   "csr": {
     "title": "CSR Program",
     "meta": "Our commitment to social and environmental responsibility.",
-    "desc": "We are committed to giving back to the community and supporting sustainable development through various CSR initiatives.",
+    "desc": "At CV Inti Logam Persada, we believe that as members of society, we have a responsibility to contribute to the welfare and development of the communities around us. In addition to focusing on products and customers, we also care about the environment and surrounding communities.\n\nThrough our Corporate Social Responsibility (CSR) programs, we are committed to being a positive agent of change in society and making meaningful contributions to social, economic, and environmental development in Indonesia. We hope to continue collaborating with various parties to create a sustainable impact for the communities and environment around us.",
     "item1": "Social programs for communities around the factory.",
     "item2": "Environmental initiatives and sustainable education."
   },

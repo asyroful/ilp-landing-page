@@ -6,65 +6,320 @@ export const productCategories = [
     key: 'pipefittings',
     name: 'Pipe Fittings',
     products: [
-  { id: 'pf-3', name: 'Cap', description: 'Cap digunakan untuk menutup ujung pipa agar aliran fluida dapat dihentikan dengan aman. Material berkualitas memastikan daya tahan dan ketahanan terhadap tekanan tinggi.\n\nProduk ini cocok untuk berbagai aplikasi industri, mulai dari sistem air bersih hingga instalasi pabrik. Desain presisi memudahkan pemasangan dan perawatan.', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80' },
-  { id: 'pf-1', name: 'Elbow 90°', description: 'Elbow 90° berfungsi untuk mengubah arah aliran pipa sebesar 90 derajat tanpa mengurangi kekuatan sambungan. Cocok untuk sistem perpipaan yang membutuhkan perubahan arah tajam.\n\nDibuat dari bahan tahan korosi, produk ini memberikan umur pakai yang panjang dan pemasangan yang mudah di berbagai lingkungan industri.', image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80' },
-  { id: 'pf-4', name: 'Reducer', description: 'Reducer digunakan untuk menghubungkan dua pipa dengan diameter berbeda, menjaga kelancaran aliran fluida. Desainnya memastikan transisi yang mulus dan minim turbulensi.\n\nIdeal untuk sistem distribusi air, minyak, atau gas, produk ini menawarkan fleksibilitas dalam instalasi dan efisiensi operasional.', image: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80' },
-  { id: 'pf-2', name: 'Tee', description: 'Tee memungkinkan percabangan aliran dari satu pipa utama ke dua arah berbeda. Sangat berguna untuk sistem distribusi yang kompleks dan bercabang.\n\nDengan konstruksi kokoh, Tee ini dapat digunakan pada tekanan tinggi dan berbagai jenis cairan atau gas.', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80' },
-  { id: 'pf-5', name: 'Union', description: 'Union memudahkan penyambungan dan pelepasan pipa tanpa perlu memutar seluruh instalasi. Sangat ideal untuk perawatan rutin dan penggantian komponen.\n\nDilengkapi dengan ulir presisi, Union ini memastikan sambungan yang rapat dan tahan bocor di berbagai aplikasi industri.', image: 'https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80' },
-    ].sort((a, b) => a.name.localeCompare(b.name)),
+      {
+        id: 'pr-1',
+        name: 'Bend All Flange 45',
+        description: 'Produk Bend All Flange 45, komponen pipa dengan sudut 45 derajat untuk aplikasi industri dan konstruksi.',
+        images: [
+          '/projects/Bend All Flange 45/compressed_PDMS2646.webp',
+          '/projects/Bend All Flange 45/compressed_PDMS2648.webp',
+          '/projects/Bend All Flange 45/compressed_PDMS2651.jpg',
+        ],
+      },
+      {
+        id: 'pr-2',
+        name: 'Bend All Flange 90',
+        description: 'Produk Bend All Flange 90, komponen pipa dengan sudut 90 derajat untuk kebutuhan sistem perpipaan.',
+        images: [
+          '/projects/Bend All Flange 90/compressed_PDMS2537.webp',
+          '/projects/Bend All Flange 90/compressed_PDMS2542.webp',
+          '/projects/Bend All Flange 90/compressed_PDMS2544.webp',
+          '/projects/Bend All Flange 90/compressed_PDMS2614.webp',
+          '/projects/Bend All Flange 90/compressed_PDMS2616.webp',
+          '/projects/Bend All Flange 90/compressed_PDMS2617.webp',
+        ],
+      },
+      {
+        id: 'pr-3',
+        name: 'Blind Flange',
+        description: 'Blind Flange digunakan untuk menutup ujung pipa, cocok untuk berbagai aplikasi industri.',
+        images: [
+          '/projects/Blind Flange/compressed_PDMS2532.webp',
+          '/projects/Blind Flange/compressed_PDMS2530.webp',
+          '/projects/Blind Flange/compressed_PDMS2535.webp',
+        ],
+      },
+      {
+        id: 'pr-4',
+        name: 'Clamp',
+        description: 'Clamp untuk pengikat pipa dan komponen lainnya, memberikan kekuatan dan stabilitas.',
+        images: [
+          '/projects/Clamp/compressed_PDMS2449 copy.webp',
+          '/projects/Clamp/compressed_PDMS2450 copy.webp',
+          '/projects/Clamp/compressed_PDMS2455.webp',
+        ],
+      },
+      {
+        id: 'pr-5',
+        name: 'Clamp Saddle',
+        description: 'Clamp Saddle sebagai penyangga pipa pada instalasi industri.',
+        images: [
+          '/projects/Clamp Saddle/compressed_PDMS2457.webp',
+          '/projects/Clamp Saddle/compressed_PDMS2458.webp',
+          '/projects/Clamp Saddle/compressed_PDMS2463.webp',
+        ],
+      },
+      {
+        id: 'pr-6',
+        name: 'Counter Weight Lift',
+        description: 'Counter Weight Lift untuk sistem pengangkatan dan penyeimbang beban.',
+        images: [
+          '/projects/Counter Weight Lift/compressed_PDMS2679.webp',
+          '/projects/Counter Weight Lift/compressed_PDMS2680.webp',
+          '/projects/Counter Weight Lift/compressed_PDMS2685.webp',
+        ],
+      },
+      {
+        id: 'pr-11',
+        name: 'Flange Spigot',
+        description: 'Flange Spigot untuk sambungan pipa yang presisi.',
+        images: [
+          '/projects/Flange Spigot/compressed_PDMS2549.webp',
+          '/projects/Flange Spigot/compressed_PDMS2551.webp',
+          '/projects/Flange Spigot/compressed_PDMS2554.webp',
+          '/projects/Flange Spigot/compressed_PDMS2618.webp',
+          '/projects/Flange Spigot/compressed_PDMS2619.webp',
+          '/projects/Flange Spigot/compressed_PDMS2627.webp',
+        ],
+      },
+      {
+        id: 'pr-12',
+        name: 'G-Bolt Joint',
+        description: 'G-Bolt Joint sebagai pengikat sambungan pipa.',
+        images: [
+          '/projects/G-Bolt Joint/compressed_PDMS2559.webp',
+          '/projects/G-Bolt Joint/compressed_PDMS2560.webp',
+          '/projects/G-Bolt Joint/compressed_PDMS2562.webp',
+          '/projects/G-Bolt Joint/compressed_PDMS2569.webp',
+          '/projects/G-Bolt Joint/compressed_PDMS2572.webp',
+          '/projects/G-Bolt Joint/compressed_PDMS2575.webp',
+          '/projects/G-Bolt Joint/compressed_PDMS2605.webp',
+          '/projects/G-Bolt Joint/compressed_PDMS2606.webp',
+          '/projects/G-Bolt Joint/compressed_PDMS2608.webp',
+        ],
+      },
+      {
+        id: 'pr-27',
+        name: 'G-Bolt Repair',
+        description: 'G-Bolt Repair untuk perbaikan sambungan pipa.',
+        images: [
+          '/projects/G-Bolt Repair/compressed_PDMS1234.webp',
+          '/projects/G-Bolt Repair/compressed_PDMS1235.webp',
+          '/projects/G-Bolt Repair/compressed_PDMS1236.webp',
+        ]
+      },
+      {
+        id: 'pr-20',
+        name: 'Pulley',
+        description: 'Pulley untuk sistem transmisi daya.',
+        images: [
+          '/projects/Pulley/compressed_PDMS2638.webp',
+          '/projects/Pulley/compressed_PDMS2639.webp',
+          '/projects/Pulley/compressed_PDMS2640.webp',
+        ],
+      },
+      {
+        id: 'pr-21',
+        name: 'Reducer All Flange',
+        description: 'Reducer All Flange untuk transisi diameter pipa.',
+        images: [
+          '/projects/Reducer All Flange/compressed_PDMS2742.webp',
+          '/projects/Reducer All Flange/compressed_PDMS2750.webp',
+          '/projects/Reducer All Flange/compressed_PDMS2753 copy.webp',
+        ],
+      },
+      {
+        id: 'pr-23',
+        name: 'Street Box',
+        description: 'Street Box sebagai pelindung instalasi bawah tanah.',
+        images: [
+          '/projects/Street Box/compressed_PDMS2653.webp',
+          '/projects/Street Box/compressed_PDMS2657.webp',
+          '/projects/Street Box/compressed_PDMS2655.webp',
+        ],
+      },
+      {
+        id: 'pr-24',
+        name: 'Tee All Flange',
+        description: 'Tee All Flange untuk percabangan pipa.',
+        images: [
+          '/projects/Tee All Flange/compressed_PDMS2710.webp',
+          '/projects/Tee All Flange/compressed_PDMS2709.webp',
+          '/projects/Tee All Flange/compressed_PDMS2712.webp',
+          '/projects/Tee All Flange/compressed_PDMS2721.webp',
+        ],
+      },
+    ],
   },
   {
     key: 'drainage',
     name: 'Drainage',
     products: [
-  { id: 'dr-2', name: 'Catch Basin', description: 'Catch basin berfungsi sebagai penampungan air sementara sebelum dialirkan ke saluran utama. Desainnya mencegah masuknya kotoran besar ke sistem drainase.\n\nProduk ini sangat penting untuk mencegah banjir dan menjaga kebersihan saluran air di area perkotaan maupun industri.', image: 'https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=400&q=80' },
-  { id: 'dr-1', name: 'Grating', description: 'Grating digunakan untuk menutup saluran air agar tetap aman dan bebas dari sampah besar. Material besi cor memberikan kekuatan ekstra dan ketahanan terhadap beban berat.\n\nCocok untuk area parkir, jalan raya, dan kawasan industri yang membutuhkan sistem drainase handal.', image: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80' },
-  { id: 'dr-3', name: 'Manhole Cover', description: 'Manhole cover besi cor melindungi akses ke saluran bawah tanah dan memastikan keamanan pejalan kaki serta kendaraan. Permukaan anti-slip menambah faktor keselamatan.\n\nProduk ini tahan lama dan mudah dipasang, cocok untuk berbagai aplikasi infrastruktur perkotaan.', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80' },
-    ].sort((a, b) => a.name.localeCompare(b.name)),
+      {
+        id: 'pr-7',
+        name: 'Deck Drain 1',
+        description: 'Deck Drain tipe 1 untuk sistem drainase lantai industri.',
+        images: [
+          '/projects/Deck Drain 1/compressed_PDMS2733.webp',
+          '/projects/Deck Drain 1/compressed_PDMS2732.webp',
+          '/projects/Deck Drain 1/compressed_PDMS2737.webp',
+        ],
+      },
+      {
+        id: 'pr-8',
+        name: 'Deck Drain 2',
+        description: 'Deck Drain tipe 2 untuk kebutuhan drainase lantai.',
+        images: [
+          '/projects/Deck Drain 2/compressed_PDMS2688.webp',
+          '/projects/Deck Drain 2/compressed_PDMS2687.webp',
+          '/projects/Deck Drain 2/compressed_PDMS2698.webp',
+        ],
+      },
+      {
+        id: 'pr-9',
+        name: 'Deck Drain 3',
+        description: 'Deck Drain tipe 3, solusi drainase lantai yang efisien.',
+        images: [
+          '/projects/Deck Drain 3/compressed_PDMS2727.webp',
+          '/projects/Deck Drain 3/compressed_PDMS2723.webp',
+          '/projects/Deck Drain 3/compressed_PDMS2728.webp',
+        ],
+      },
+      {
+        id: 'pr-13',
+        name: 'Grill',
+        description: 'Grill untuk ventilasi dan proteksi pada sistem industri.',
+        images: [
+          '/projects/Grill/compressed_PDMS2706.webp',
+          '/projects/Grill/compressed_PDMS2704.webp',
+          '/projects/Grill/compressed_PDMS2705.webp',
+        ],
+      },
+      {
+        id: 'pr-22',
+        name: 'Roof Drain',
+        description: 'Roof Drain untuk sistem drainase atap bangunan.',
+        images: [
+          '/projects/Roof Drain/compressed_PDMS2633.webp',
+          '/projects/Roof Drain/compressed_PDMS2636.webp',
+          '/projects/Roof Drain/compressed_PDMS2635.webp',
+        ],
+      },
+    ]
   },
   {
     key: 'construction',
     name: 'Construction',
     products: [
-  { id: 'co-2', name: 'Base Plate', description: 'Base plate adalah pelat baja yang digunakan sebagai alas struktur bangunan, memberikan distribusi beban yang merata ke pondasi. Kualitas material sangat menentukan kekuatan struktur secara keseluruhan.\n\nProduk ini mudah dipasang dan tersedia dalam berbagai ukuran sesuai kebutuhan proyek konstruksi.', image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80' },
-  { id: 'co-1', name: 'Anchor Bolt', description: 'Anchor bolt digunakan untuk mengikat struktur baja ke pondasi beton, memberikan kestabilan dan kekuatan ekstra. Cocok untuk berbagai aplikasi konstruksi berat.\n\nDesain ulir presisi memastikan pemasangan yang kuat dan tahan lama di lingkungan ekstrem.', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80' },
-  { id: 'co-3', name: 'Stud Bolt', description: 'Stud bolt adalah baut berulir penuh yang digunakan untuk sambungan struktur baja atau mesin. Memudahkan perakitan dan pembongkaran komponen.\n\nProduk ini tersedia dalam berbagai ukuran dan material, cocok untuk kebutuhan industri maupun konstruksi.', image: 'https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80' },
-    ].sort((a, b) => a.name.localeCompare(b.name)),
+      {
+        id: 'pr-18',
+        name: 'Jacknut 1',
+        description: 'Jacknut tipe 1 sebagai pengikat komponen.',
+        images: [
+          '/projects/Jacknut 1/compressed_PDMS2481.webp',
+          '/projects/Jacknut 1/compressed_PDMS2485.webp',
+          '/projects/Jacknut 1/compressed_PDMS2482.webp',
+        ],
+      },
+      {
+        id: 'pr-19',
+        name: 'Jacknut 2',
+        description: 'Jacknut tipe 2 untuk aplikasi pengikatan.',
+        images: [
+          '/projects/Jacknut 2/compressed_PDMS2490.webp',
+          '/projects/Jacknut 2/compressed_PDMS2492.webp',
+          '/projects/Jacknut 2/compressed_PDMS2493.webp',
+        ],
+      },
+      
+      {
+        id: 'pr-25',
+        name: 'Wingnut 1',
+        description: 'Wingnut tipe 1 untuk penguncian komponen.',
+        images: [
+          '/projects/Wingnut 1/compressed_PDMS2466.webp',
+          '/projects/Wingnut 1/compressed_PDMS2467.webp',
+          '/projects/Wingnut 1/compressed_PDMS2468.webp',
+        ],
+      },
+      {
+        id: 'pr-26',
+        name: 'Wingnut 2',
+        description: 'Wingnut tipe 2 untuk aplikasi penguncian.',
+        images: [
+          '/projects/Wingnut 2/compressed_PDMS2476.webp',
+          '/projects/Wingnut 2/compressed_PDMS2479.webp',
+          '/projects/Wingnut 2/compressed_PDMS2477.webp',
+        ],
+      },
+    ]
   },
   {
     key: 'automotive',
     name: 'Automotive',
     products: [
-  { id: 'au-2', name: 'Axle Shaft', description: 'Axle shaft adalah poros penggerak utama pada sistem transmisi kendaraan, mentransfer tenaga dari mesin ke roda. Material berkualitas tinggi menjamin daya tahan dan performa optimal.\n\nProduk ini cocok untuk berbagai jenis kendaraan, baik mobil penumpang maupun alat berat.', image: 'https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=400&q=80' },
-  { id: 'au-1', name: 'Bracket', description: 'Bracket otomotif berfungsi sebagai penyangga atau pengikat komponen kendaraan, seperti mesin atau sistem suspensi. Desain presisi memastikan kestabilan dan keamanan.\n\nBracket ini mudah dipasang dan kompatibel dengan berbagai model kendaraan.', image: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80' },
-  { id: 'au-3', name: 'Engine Mount', description: 'Engine mount berfungsi meredam getaran mesin agar tidak diteruskan ke rangka kendaraan. Material elastomer berkualitas memberikan kenyamanan berkendara.\n\nProduk ini tahan panas dan cocok untuk berbagai tipe mesin otomotif.', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80' },
-    ].sort((a, b) => a.name.localeCompare(b.name)),
+      {
+        id: 'pr-14',
+        name: 'Hanger Bracket',
+        description: 'Hanger Bracket sebagai penyangga pipa dan komponen lainnya.',
+        images: [
+          '/projects/Hanger Bracket/compressed_PDMS2582.webp',
+          '/projects/Hanger Bracket/compressed_PDMS2583.webp',
+          '/projects/Hanger Bracket/compressed_PDMS2586.webp',
+        ],
+      },
+      {
+        id: 'pr-15',
+        name: 'Hanger Helper',
+        description: 'Hanger Helper untuk membantu pemasangan pipa.',
+        images: [
+          '/projects/Hanger Helper/compressed_PDMS2510.webp',
+          '/projects/Hanger Helper/compressed_PDMS2511.webp',
+          '/projects/Hanger Helper/compressed_PDMS2513.webp',
+        ],
+      },
+      {
+        id: 'pr-16',
+        name: 'Hanger Helper 1',
+        description: 'Hanger Helper tipe 1 untuk aplikasi khusus.',
+        images: [
+          '/projects/Hanger Helper 1/compressed_PDMS2521.webp',
+          '/projects/Hanger Helper 1/compressed_PDMS2518.webp',
+          '/projects/Hanger Helper 1/compressed_PDMS2516.webp',
+        ],
+      },
+      {
+        id: 'pr-17',
+        name: 'Hanger Helper 2',
+        description: 'Hanger Helper tipe 2 untuk kebutuhan instalasi.',
+        images: [
+          '/projects/Hanger Helper 2/compressed_PDMS2525.webp',
+          '/projects/Hanger Helper 2/compressed_PDMS2526.webp',
+          '/projects/Hanger Helper 2/compressed_PDMS2529.webp',
+        ],
+      },
+    ]
   },
   {
     key: 'heavyequip',
     name: 'Heavy Equipment',
     products: [
-  { id: 'he-2', name: 'Bucket Teeth', description: 'Bucket teeth adalah ujung gigi pada bucket excavator yang berfungsi untuk menggali dan memecah material keras. Material baja khusus memberikan ketahanan aus yang tinggi.\n\nProduk ini mudah diganti dan meningkatkan efisiensi kerja alat berat.', image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80' },
-  { id: 'he-1', name: 'Bucket', description: 'Bucket merupakan wadah utama pada alat berat seperti excavator atau loader untuk mengangkut material. Desain ergonomis memudahkan proses penggalian dan pemindahan.\n\nTersedia dalam berbagai kapasitas sesuai kebutuhan proyek konstruksi atau pertambangan.', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80' },
-  { id: 'he-3', name: 'Track Roller', description: 'Track roller adalah komponen penting pada sistem undercarriage alat berat, berfungsi menopang dan mengarahkan track. Material berkualitas menjamin umur pakai yang panjang.\n\nProduk ini cocok untuk berbagai jenis alat berat dan mudah dalam perawatan.', image: 'https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80' },
-    ].sort((a, b) => a.name.localeCompare(b.name)),
+      {
+        id: 'pr-10',
+        name: 'Excavator Tooth',
+        description: 'Excavator Tooth sebagai komponen alat berat untuk penggalian.',
+        images: [
+          '/projects/Excavator Tooth/compressed_PDMS2766.webp',
+          '/projects/Excavator Tooth/compressed_PDMS2768.webp',
+          '/projects/Excavator Tooth/compressed_PDMS2761.webp',
+        ],
+      },
+    ]
   },
   {
     key: 'mining',
     name: 'Mining',
-    products: [
-  { id: 'mi-2', name: 'Crusher Plate', description: 'Crusher plate adalah pelat baja yang digunakan pada mesin penghancur batu di industri pertambangan. Ketahanan terhadap benturan dan aus sangat diutamakan.\n\nProduk ini membantu meningkatkan efisiensi proses penghancuran material tambang.', image: 'https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=400&q=80' },
-  { id: 'mi-1', name: 'Screen', description: 'Screen digunakan untuk memisahkan material berdasarkan ukuran di industri pertambangan. Desain mesh yang presisi memastikan hasil sortir yang optimal.\n\nMaterial tahan aus membuat produk ini cocok untuk penggunaan jangka panjang di lingkungan berat.', image: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80' },
-  { id: 'mi-3', name: 'Vibrating Feeder', description: 'Vibrating feeder berfungsi mengalirkan material tambang secara teratur ke mesin pemroses berikutnya. Getaran yang dihasilkan memastikan distribusi material yang merata.\n\nCocok untuk berbagai aplikasi pertambangan dan pengolahan mineral.', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80' },
-    ].sort((a, b) => a.name.localeCompare(b.name)),
+    products: []
   },
-  {
-    key: 'other',
-    name: 'Other',
-    products: [
-  { id: 'ot-2', name: 'Bespoke Casting', description: 'Bespoke casting adalah layanan pengecoran logam custom sesuai kebutuhan klien, mulai dari desain hingga finishing. Proses presisi menghasilkan produk berkualitas tinggi.\n\nLayanan ini cocok untuk industri otomotif, konstruksi, maupun manufaktur yang membutuhkan komponen unik.', image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80' },
-  { id: 'ot-1', name: 'Custom Part', description: 'Custom part adalah solusi untuk kebutuhan komponen yang tidak tersedia di pasaran. Dapat dibuat dari berbagai material sesuai spesifikasi teknis.\n\nLayanan ini memberikan fleksibilitas penuh bagi klien dalam pengembangan produk atau perbaikan mesin.', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80' },
-  { id: 'ot-3', name: 'Prototype', description: 'Prototype adalah tahap awal pengembangan produk untuk menguji desain dan fungsi sebelum produksi massal. Proses pembuatan cepat dan akurat.\n\nLayanan ini sangat membantu perusahaan dalam inovasi dan percepatan time-to-market.', image: 'https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80' },
-    ].sort((a, b) => a.name.localeCompare(b.name)),
-  },
+
 ];

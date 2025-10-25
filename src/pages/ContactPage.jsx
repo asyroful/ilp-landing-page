@@ -73,10 +73,10 @@ export default function ContactPage() {
                     <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-red-600 p-2 bg-gray-100 rounded-full transition-colors duration-300">
                         <FaFacebookF size={20} />
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-pink-600 p-2 bg-gray-100 rounded-full transition-colors duration-300">
+                    <a href="https://www.instagram.com/cv.intilogampersada" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-pink-600 p-2 bg-gray-100 rounded-full transition-colors duration-300">
                         <FaInstagram size={20} />
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-red-700 p-2 bg-gray-100 rounded-full transition-colors duration-300">
+                    <a href="https://www.linkedin.com/company/inti-logam-persada/ " target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-red-700 p-2 bg-gray-100 rounded-full transition-colors duration-300">
                         <FaLinkedinIn size={20} />
                     </a>
                 </div>

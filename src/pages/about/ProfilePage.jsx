@@ -20,8 +20,10 @@ export default function ProfilePage() {
           <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974" alt="Tim Profesional" className="rounded-lg shadow-xl"/>
           <div>
             <h2 className="text-3xl font-bold text-gray-800 mb-4">{t('about.history_title', 'Perjalanan Kami')}</h2>
-            <div className="text-lg text-gray-600 leading-relaxed">
-              {t('about.history_desc')}
+            <div className="text-lg text-gray-600 leading-relaxed text-justify">
+              {t('about.history_desc').split('\n\n').map((para, idx) => (
+                <p key={idx} className="mb-4">{para}</p>
+              ))}
             </div>
           </div>
         </motion.div>

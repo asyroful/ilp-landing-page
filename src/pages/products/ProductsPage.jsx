@@ -137,7 +137,7 @@ export default function ProductsPage() {
             </div>
           ) : (
             <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8"
               initial="hidden"
               animate="visible"
               variants={{
@@ -164,9 +164,9 @@ export default function ProductsPage() {
                       className="block"
                     >
                       <img
-                        src={product.image}
+                        src={product.images && product.images.length > 0 ? product.images[0] : '/assets/no-image.png'}
                         alt={product.name}
-                        className="h-48 w-full object-contain bg-gray-50"
+                        className="w-full object-contain bg-gray-50"
                       />
                     </Link>
                     <div className="p-4 flex-1 flex flex-col">

@@ -2,16 +2,24 @@ import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import PageHeader from '../components/PageHeader';
+import PDAMLogo from '../assets/customer/pdam.svg';
+import PUPRLogo from '../assets/customer/pupr.svg';
+import AdhiKaryaLogo from '../assets/customer/Adhi_Karya.svg';
+import WaskitaKaryaLogo from '../assets/customer/Waskita_Karya.svg';
+import WijayaKaryaLogo from '../assets/customer/Wijaya_Karya.svg';
+import PPLogo from '../assets/customer/PT_PP_logo.svg';
+import PertaminaLogo from '../assets/customer/pertamina.svg';
+import PLNLogo from '../assets/customer/pln.svg';
 
 const customers = [
-  { name: 'PDAM', logo: 'https://asset.kompas.com/crops/0Qn6QnQnQnQnQnQnQnQnQnQnQnQ=/0x0:0x0/750x500/data/photo/2021/07/01/60ddc7e2b7b7b.png' },
-  { name: 'PUPR', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6e/Logo_Kementerian_PUPR.png' },
-  { name: 'Adhi Karya', logo: 'https://www.adhi.co.id/frontend/images/logo-adhi.png' },
-  { name: 'Waskita Karya', logo: 'https://www.waskita.co.id/assets/img/logo.png' },
-  { name: 'Wijaya Karya', logo: 'https://www.wika.co.id/images/logo-wika.png' },
-  { name: 'PP', logo: 'https://www.ptpp.co.id/uploads/logo/pp-logo.png' },
-  { name: 'Pertamina', logo: 'https://www.pertamina.com/Asset/img/logo-pertamina.png' },
-  { name: 'PLN', logo: 'https://www.pln.co.id/statics/images/logo-pln.png' },
+  { name: 'PDAM', logo: PDAMLogo },
+  { name: 'PUPR', logo: PUPRLogo },
+  { name: 'Adhi Karya', logo: AdhiKaryaLogo },
+  { name: 'Waskita Karya', logo: WaskitaKaryaLogo },
+  { name: 'Wijaya Karya', logo: WijayaKaryaLogo },
+  { name: 'PP', logo: PPLogo },
+  { name: 'Pertamina', logo: PertaminaLogo },
+  { name: 'PLN', logo: PLNLogo },
 ];
 
 export default function CustomersPage() {

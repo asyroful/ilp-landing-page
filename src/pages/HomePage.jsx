@@ -3,9 +3,17 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { FaArrowRight, FaCog, FaShieldAlt, FaTruck, FaMedal, FaUsers, FaDraftingCompass } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { blogPosts } from '../data/blogData';
 import BlogCard from '../components/BlogCard';
+import PDAMLogo from '../assets/customer/pdam.svg';
+import PUPRLogo from '../assets/customer/pupr.svg';
+import AdhiKaryaLogo from '../assets/customer/Adhi_Karya.svg';
+import WaskitaKaryaLogo from '../assets/customer/Waskita_Karya.svg';
+import WijayaKaryaLogo from '../assets/customer/Wijaya_Karya.svg';
+import PPLogo from '../assets/customer/PT_PP_logo.svg';
+import PertaminaLogo from '../assets/customer/pertamina.svg';
+import PLNLogo from '../assets/customer/pln.svg';
 
 // --- SUB-KOMPONEN UNTUK KERAPIAN ---
 
@@ -143,37 +151,103 @@ const AboutSnippetSection = () => {
 
 
 // 4. Client Logos Section
-const ClientLogosSection = () => {
+  const ClientLogosSection = () => {
     const logos = [
-        '/placeholder-logo-1.svg', '/placeholder-logo-2.svg',
-        '/placeholder-logo-3.svg', '/placeholder-logo-4.svg',
-        '/placeholder-logo-5.svg', '/placeholder-logo-6.svg',
+      PDAMLogo,
+      PUPRLogo,
+      AdhiKaryaLogo,
+      WaskitaKaryaLogo,
+      WijayaKaryaLogo,
+      PPLogo,
+      PertaminaLogo,
+      PLNLogo
     ];
-    const { t } = useTranslation();
 
+    // **Kunci untuk Infinite Scroll: Gandakan daftar logo**
+    const infiniteLogos = [...logos, ...logos];
+
+    const { t } = useTranslation();
+    const ref = useRef(null);
+    const [inView, setInView] = useState(false);
+
+    // Logic untuk mendeteksi apakah komponen sudah terlihat (View Logic)
+    useEffect(() => {
+      const handleScroll = () => {
+        if (!ref.current) return;
+        const rect = ref.current.getBoundingClientRect();
+        // Cek apakah komponen ada di viewport
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          setInView(true);
+        }
+      };
+      window.addEventListener('scroll', handleScroll);
+      handleScroll();
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    // Durasi animasi yang disarankan (sesuaikan dengan jumlah logo)
+    const DURATION = logos.length * 1; // Contoh: 8 logo * 1 detik = 8 detik
+    
     return (
-        <section className="py-20 bg-white">
-            <div className="container mx-auto px-4 text-center">
-                <h2 className="text-3xl font-bold text-gray-800 mb-10">{t('homepage.clients.title')}</h2>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center">
-                    {logos.map((logo, index) => (
-                        <motion.div key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                        >
-                            {/* Ganti dengan gambar logo Anda. Gunakan placeholder abu-abu untuk sementara. */}
-                            <div className="w-32 h-16 bg-gray-300 mx-auto rounded-md flex items-center justify-center text-gray-500">
-                                LOGO {index+1}
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-            </div>
-        </section>
+      <section ref={ref} className="py-20 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-10">{t('homepage.clients.title')}</h2>
+          
+          {/* Wrapper utama yang menyembunyikan overflow dan menampung slider */}
+          <div className="relative overflow-hidden">
+            {/* Animasi In-View (opacity dan x: 0) - Gunakan motion.div luar */}
+            <motion.div
+              className="flex items-center"
+              initial={{ opacity: 0, x: 100 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 1, ease: 'easeOut' }}
+            >
+              {/* Animasi Slider (x: -100%) - Gunakan motion.div dalam */}
+              <motion.div
+                className="flex items-center"
+                // Mulai dari 0%
+                initial={{ x: '0%' }}
+                // Bergerak sampai -50%. Karena kita punya 2 set logo (200%), -100% dari total minWidth berarti menggeser 1 set logo penuh.
+                animate={{ x: '-50%' }} 
+                transition={{ 
+                  repeat: Infinity, 
+                  repeatType: 'loop', 
+                  duration: DURATION, // Durasi yang lebih dinamis
+                  ease: 'linear' 
+                }}
+                // Memastikan container cukup lebar untuk menampung semua logo ganda
+                style={{ minWidth: 'max-content' }}
+              >
+                {/* Mapping ke daftar logo yang sudah digandakan */}
+                {infiniteLogos.map((logo, index) => {
+                  // Tentukan apakah logo ini adalah logo terakhir dari set PERTAMA atau set KEDUA
+                  const isLastOfFirstGroup = index === logos.length - 1;
+                  // Hilangkan margin pada logo terakhir set pertama agar logo pertama set kedua menempel
+                  const isLastOfAnyGroup = index === infiniteLogos.length - 1;
+
+                  return (
+                    <div
+                      key={index}
+                      className={`w-32 h-16 rounded-md flex items-center justify-center bg-white shadow
+                        ${!isLastOfFirstGroup && !isLastOfAnyGroup ? ' mr-12' : ''}
+                        ${isLastOfFirstGroup ? ' mr-12' : ''} 
+                      `}
+                    >
+                      <img 
+                        src={logo} 
+                        alt={`Logo ${index % logos.length + 1}`} 
+                        className="h-full w-auto object-contain p-2" 
+                      />
+                    </div>
+                  );
+                })}
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
     );
-};
+}
 
 
 // 5. CTA Section (Call to Action)

@@ -24,8 +24,8 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4 mt-6">
               <a href="#" className="text-white hover:text-white"><FaFacebook size={24} /></a>
-              <a href="#" className="text-white hover:text-white"><FaInstagram size={24} /></a>
-              <a href="#" className="text-white hover:text-white"><FaLinkedin size={24} /></a>
+              <a href="https://www.instagram.com/cv.intilogampersada" className="text-white hover:text-white"><FaInstagram size={24} /></a>
+              <a href="https://www.linkedin.com/company/inti-logam-persada/" className="text-white hover:text-white"><FaLinkedin size={24} /></a>
             </div>
           </div>
 
