@@ -47,7 +47,7 @@ export default function ProductDetailPage() {
   return (
     <div className="container mx-auto px-8 py-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="col-span-2">
+        <div className="col-span-1 lg:col-span-2">
           <div className="mb-4">
             <Link
               to="/products"
@@ -82,7 +82,7 @@ export default function ProductDetailPage() {
           </nav>
           <div className="flex flex-col md:flex-row gap-8">
             {/* Main Content */}
-            <div className="w-1/2">
+            <div className="w-full lg:w-1/2">
               <h1 className="text-2xl md:text-4xl font-bold mb-6">
                 {product.name}
               </h1>
@@ -134,13 +134,13 @@ export default function ProductDetailPage() {
                 )}
               </div>
             </div>
-            <div className="w-1/2 text-gray-700 whitespace-pre-wrap mb-4 text-base">
+            <div className="w-full lg:w-1/2 text-gray-700 whitespace-pre-wrap mb-4 text-base">
               {product.description || "-"}
             </div>
           </div>
         </div>
         <aside className="w-full shrink-0">
-          <div className="sticky top-1/2 -translate-y-1/2 bg-white rounded-lg shadow-2xl p-6 mb-8 flex flex-col justify-center">
+          <div className="lg:sticky lg:top-1/2 lg:-translate-y-1/2 bg-white rounded-lg shadow-2xl p-6 mb-8 flex flex-col justify-center">
             <h3 className="text-3xl font-bold mb-2 text-center">
               {t('products_page.interested', 'Interested in:')} <span className="text-red-500">{product.name}</span>?
             </h3>
