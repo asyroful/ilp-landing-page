@@ -54,18 +54,18 @@ export default function ProductDetailPage() {
   const mainImage = images[mainImageIdx] || "";
 
   return (
-    <div className="container mx-auto px-8 py-8">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div className="container mx-auto px-4 md:px-8 py-6 md:py-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
         <div className="col-span-1 lg:col-span-2">
-          <div className="mb-4 flex gap-6 items-center">
+          <div className="mb-4 flex flex-col md:flex-row md:gap-6 gap-2 items-start md:items-center">
             <Link
               to="/products"
-              className="inline-flex items-center gap-2 border border-red-600 text-red-600 font-semibold rounded px-4 py-2 hover:bg-red-50 transition"
+              className="inline-flex items-center gap-2 border border-red-600 text-red-600 font-semibold rounded px-3 py-2 md:px-4 md:py-2 hover:bg-red-50 transition text-base md:text-lg"
             >
               <FaArrowLeft />
               {t("products_page.back")}
             </Link>
-            <nav className="text-sm text-gray-500" aria-label="Breadcrumb">
+            <nav className="text-xs md:text-sm text-gray-500 mt-2 md:mt-0" aria-label="Breadcrumb">
               <ol className="list-none flex flex-wrap gap-1 items-center">
                 <li>
                   <Link
@@ -92,12 +92,12 @@ export default function ProductDetailPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Main Content */}
             <div className="mb-6 flex flex-col items-center">
-              <div className="flex w-full justify-center items-center gap-4">
+              <div className="flex w-full justify-center items-center gap-2 md:gap-4">
                 {/* Main image */}
                 <div className="relative flex-1 flex justify-center items-center">
                   {images.length > 1 && (
                     <button
-                      className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow"
+                      className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow"
                       onClick={() => setMainImageIdx((prev) => prev === 0 ? images.length - 1 : prev - 1)}
                       aria-label="Previous image"
                     >
@@ -111,7 +111,7 @@ export default function ProductDetailPage() {
                   />
                   {images.length > 1 && (
                     <button
-                      className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow"
+                      className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow"
                       onClick={() => setMainImageIdx((prev) => prev === images.length - 1 ? 0 : prev + 1)}
                       aria-label="Next image"
                     >
@@ -132,7 +132,7 @@ export default function ProductDetailPage() {
                         <img
                           src={img}
                           alt={product.name + " thumbnail " + (idx + 1)}
-                          className="w-16 h-16 object-contain rounded"
+                          className="w-14 h-14 md:w-16 md:h-16 object-contain rounded"
                         />
                       </button>
                     ))}
@@ -141,18 +141,18 @@ export default function ProductDetailPage() {
               </div>
             </div>
             <div className="ml-0 lg:ml-8">
-              <h1 className="text-2xl md:text-4xl font-bold mb-6">
+              <h1 className="text-xl md:text-4xl font-bold mb-4 md:mb-6">
                 {product.name}
               </h1>
-              <div className="text-lg w-full text-gray-700 whitespace-pre-wrap mb-8">
+              <div className="text-base md:text-lg w-full text-gray-700 whitespace-pre-wrap mb-6 md:mb-8">
                 {product.description || "-"}
-                <div className="mt-4">
+                <div className="mt-3 md:mt-4">
                   <span className="font-semibold">Material :</span>
-                  <ul className="list-disc list-inside ml-6 mt-2">
+                  <ul className="list-disc list-inside mt-2">
                     {Array.isArray(product.material) && product.material.length > 0 ? (
                       product.material.map((mat, idx) => (
                         <li key={idx} className="flex gap-2 items-center">
-                          <div className="font-semibold min-w-[120px] text-left">{mat.label}</div>
+                          <div className="font-semibold min-w-[100px] md:min-w-[120px] text-left">{mat.label}</div>
                           <span className="mx-2">:</span>
                           <div>{mat.value}</div>
                         </li>
