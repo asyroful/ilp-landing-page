@@ -192,7 +192,7 @@ const AboutSnippetSection = () => {
     }, []);
 
     // Durasi animasi yang disarankan (sesuaikan dengan jumlah logo)
-    const DURATION = logos.length * 10; // Contoh: 8 logo * 5 detik = 40 detik
+    const DURATION = logos.length * 4; // Contoh: 8 logo * 5 detik = 40 detik
     
     return (
       <section ref={ref} className="py-20 bg-white">
