@@ -38,6 +38,7 @@ export default function ProductsPage() {
 
   const handleCategoryClick = (key) => {
     setLoading(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
     if (key === "all") {
       navigate("/products");
     } else {

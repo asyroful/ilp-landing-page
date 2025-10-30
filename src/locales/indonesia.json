@@ -13,8 +13,8 @@
     "automotive": "Otomotif",
     "mining": "Pertambangan",
     "heavyequip": "Alat Berat",
-    "other": "Lainnya",
-    "customers": "Customer",
+    "other": "Produk Lainnya",
+    "customers": "Pelanggan Kami",
     "blog": "Blog",
     "contact": "Hubungi Kami"
   },
@@ -186,7 +186,7 @@
     "desc": "Kami memproduksi suku cadang yang kokoh dan andal untuk alat berat dan mesin industri."
   },
   "others": {
-    "title": "Lainnya",
+    "title": "Produk Lainnya",
     "meta": "Produk logam lain dan solusi kustom.",
     "desc": "Kami juga menyediakan produk logam kustom sesuai kebutuhan spesifik Anda."
   },

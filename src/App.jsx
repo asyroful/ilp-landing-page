@@ -17,11 +17,11 @@ import ProfilePage from './pages/about/ProfilePage';
 import VisionMissionPage from './pages/about/VisionMissionPage';
 import ValuesPage from './pages/about/ValuesPage';
 import CsrPage from './pages/about/CsrPage';
+import CustomersPage from './pages/about/CustomersPage';
 // Products subpages
 import ProductDetailPage from './pages/products/ProductDetailPage';
 import ProductsPage from './pages/products/ProductsPage';
 // Customers
-import CustomersPage from './pages/CustomersPage';
 
 function App() {
   // State untuk tombol scroll ke atas
@@ -47,13 +47,13 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/about/profile" element={<ProfilePage />} />
+            <Route path="/about/customers" element={<CustomersPage />} />
             <Route path="/about/vision-mission" element={<VisionMissionPage />} />
             <Route path="/about/values" element={<ValuesPage />} />
             <Route path="/about/csr" element={<CsrPage />} />
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/products/:category" element={<ProductsPage />} />
             <Route path="/products/:category/:slug" element={<ProductDetailPage />} />
-            <Route path="/customers" element={<CustomersPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/blog" element={<BlogPage />} />
@@ -62,7 +62,7 @@ function App() {
           </Routes>
           {/* Floating WhatsApp Button */}
           <a
-            href="https://wa.me/6281234567890" // Ganti dengan nomor WhatsApp yang benar
+            href="https://wa.me/6289528931203?text=Halo CV. Inti Logam Persada" // Ganti dengan nomor WhatsApp yang benar
             target="_blank"
             rel="noopener noreferrer"
             className="fixed z-50 bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 flex items-center justify-center transition-colors duration-300"

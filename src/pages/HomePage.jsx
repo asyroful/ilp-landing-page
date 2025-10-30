@@ -12,7 +12,10 @@ import AdhiKaryaLogo from '../assets/customer/Adhi_Karya.svg';
 import WaskitaKaryaLogo from '../assets/customer/Waskita_Karya.svg';
 import WijayaKaryaLogo from '../assets/customer/Wijaya_Karya.svg';
 import PPLogo from '../assets/customer/PT_PP_logo.svg';
-import PertaminaLogo from '../assets/customer/pertamina.svg';
+import HutamaKaryaLogo from '../assets/customer/Hutama_Karya.svg';
+import SchindlerLogo from '../assets/customer/schindler.svg';
+import NindyaKaryaLogo from '../assets/customer/nindya_karya.svg';
+import JayaKencanaLogo from '../assets/customer/jaya_kencana.svg';
 import PLNLogo from '../assets/customer/pln.svg';
 
 // --- SUB-KOMPONEN UNTUK KERAPIAN ---
@@ -159,8 +162,11 @@ const AboutSnippetSection = () => {
       WaskitaKaryaLogo,
       WijayaKaryaLogo,
       PPLogo,
-      PertaminaLogo,
-      PLNLogo
+      PLNLogo,
+      HutamaKaryaLogo,
+      SchindlerLogo,
+      NindyaKaryaLogo,
+      JayaKencanaLogo
     ];
 
     // **Kunci untuk Infinite Scroll: Gandakan daftar logo**
@@ -186,7 +192,7 @@ const AboutSnippetSection = () => {
     }, []);
 
     // Durasi animasi yang disarankan (sesuaikan dengan jumlah logo)
-    const DURATION = logos.length * 1; // Contoh: 8 logo * 1 detik = 8 detik
+    const DURATION = logos.length * 10; // Contoh: 8 logo * 5 detik = 40 detik
     
     return (
       <section ref={ref} className="py-20 bg-white">

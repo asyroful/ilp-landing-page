@@ -21,6 +21,7 @@ export default function Navbar() {
       submenu: [
         { title: t('navbar.profile'), path: '/about/profile' },
         { title: t('navbar.vision_mission'), path: '/about/vision-mission' },
+        { title: t('navbar.customers'), path: '/about/customers' },
         { title: t('navbar.values'), path: '/about/values' },
         { title: t('navbar.csr'), path: '/about/csr' },
       ]
@@ -34,7 +35,6 @@ export default function Navbar() {
         // subProducts: cat.products // bisa dipakai untuk submenu lebih dalam jika ingin
       })),
     },
-    { title: t('navbar.customers'), path: '/customers' },
     { title: t('navbar.blog'), path: '/blog' },
     { title: t('navbar.contact'), path: '/contact' },
   ];
