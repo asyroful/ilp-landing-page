@@ -37,7 +37,7 @@ export default function ContactPage() {
   return (
     <>
       <Helmet>
-        <title>Hubungi Kami - PT Inti Logam Persada</title>
+        <title>Hubungi Kami - CV. Inti Logam Persada</title>
         <meta name="description" content="Hubungi kami untuk pertanyaan, penawaran, atau konsultasi proyek manufaktur Anda." />
       </Helmet>
       

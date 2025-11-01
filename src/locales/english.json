@@ -89,9 +89,9 @@
   }
   ,
   "about": {
-    "title": "About Us - PT Inti Logam Persada",
-    "meta": "Learn more about the history, vision, and mission of PT Inti Logam Persada in the metal manufacturing industry.",
-    "header": "About PT Inti Logam Persada",
+    "title": "About Us - CV. Inti Logam Persada",
+    "meta": "Learn more about the history, vision, and mission of CV. Inti Logam Persada in the metal manufacturing industry.",
+    "header": "About CV. Inti Logam Persada",
     "history_title": "Our Journey",
     "history_desc": "CV Inti Logam Persada is a company engaged in manufacturing and casting of Grey Cast Iron and Ductile Iron since 1997, located in Klaten, Central Java. The company focuses on the pipe fittings industry but also provides other products according to customer needs. For nearly 28 years, CV Inti Logam Persada has contributed to government programs through state-owned and private companies in building infrastructure and the economy in Indonesia, as well as meeting the needs of various industries.\n\nIn addition to focusing on product quality, we also care about the environment and surrounding communities. Through our CSR programs, we are committed to contributing to sustainable development and the welfare of communities around our operational locations.\n\nAs part of the manufacturing and casting industry in Indonesia, we are proud to play a role in building the nation's infrastructure and supporting national economic growth. We hope to continue collaborating with business partners, the government, and society to create a better future for Indonesia.",
     "vision_title": "Our Vision",
@@ -104,7 +104,7 @@
     "mission_5": "Make a positive impact on the surrounding environment."
   },
   "services": {
-    "title": "Our Services - PT Inti Logam Persada",
+    "title": "Our Services - CV. Inti Logam Persada",
     "meta": "Explore our metal manufacturing services, including CNC Machining, Fabrication, Welding, and Surface Finishing.",
     "header": "Our Comprehensive Services",
     "cnc_title": "CNC Machining",
@@ -117,7 +117,7 @@
     "finishing_desc": "Finishing services such as powder coating, anodizing, and polishing for aesthetics and protection."
   },
   "portfolio": {
-    "title": "Portfolio - PT Inti Logam Persada",
+    "title": "Portfolio - CV. Inti Logam Persada",
     "meta": "See our gallery of successful projects in various industries.",
     "header": "Our Project Portfolio",
     "item1": "Automotive Components",
@@ -129,7 +129,7 @@
   },
   "blog_page": {
     "title": "Blog",
-    "description": "Read the latest articles and news from PT Inti Logam Persada.",
+    "description": "Read the latest articles and news from CV. Inti Logam Persada.",
     "header_title": "Blog & Latest News",
     "header_subtitle": "Stay informed with insights from our industry.",
     "read_more": "Read More"
@@ -141,7 +141,7 @@
   "profile": {
     "title": "Company Profile",
     "meta": "Learn more about our company profile, history, and achievements.",
-    "desc": "PT Inti Logam Persada is a leading metal manufacturing company with a strong commitment to quality, innovation, and customer satisfaction."
+    "desc": "CV. Inti Logam Persada is a leading metal manufacturing company with a strong commitment to quality, innovation, and customer satisfaction."
   },
   "vision_mission": {
     "title": "Vision & Mission",

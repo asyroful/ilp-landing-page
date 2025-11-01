@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Kolom 1: Tentang Perusahaan */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-xl font-bold mb-4">PT Inti Logam Persada</h3>
+            <h3 className="text-xl font-bold mb-4">CV. Inti Logam Persada</h3>
             <p className="text-white">
               {t('footer.description')}
             </p>
@@ -58,7 +58,7 @@ export default function Footer() {
       </div>
       <div className="bg-red-900 py-4">
         <div className="container mx-auto px-4 text-center text-white">
-          <p>&copy; {new Date().getFullYear()} PT Inti Logam Persada. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} CV. Inti Logam Persada. All rights reserved.</p>
         </div>
       </div>
     </footer>

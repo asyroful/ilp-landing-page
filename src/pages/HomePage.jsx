@@ -310,7 +310,6 @@ const OurProductSection = () => {
   // Ambil 1 produk pertama dari tiap kategori yang memiliki produk
   const categories = productCategories;
   const featuredProducts = categories
-    .filter(cat => cat.key !== 'other')
     .map(cat => {
       if (cat.products && cat.products.length > 0) {
         const p = cat.products[0];
@@ -328,7 +327,7 @@ const OurProductSection = () => {
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">{t('homepage.our_product.title', 'Our Product')}</h2>
         <div className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">{t('homepage.our_product.subtitle', 'Produk-produk unggulan kami untuk berbagai kebutuhan industri.')}</div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-8">
           {featuredProducts.map((product) => (
             <div key={product.id} className="bg-white rounded-lg shadow flex flex-col overflow-hidden hover:shadow-lg transition-shadow">
               <img
@@ -366,7 +365,7 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>PT Inti Logam Persada - Solusi Manufaktur Logam</title>
+        <title>CV. Inti Logam Persada - Solusi Manufaktur Logam</title>
         <meta name="description" content="Menyediakan produk logam berkualitas tinggi dengan presisi dan keandalan yang terjamin untuk mendukung pertumbuhan bisnis Anda." />
       </Helmet>
       

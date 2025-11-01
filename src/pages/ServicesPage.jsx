@@ -26,7 +26,7 @@ export default function ServicesPage() {
   return (
     <>
       <Helmet>
-        <title>{t('services.title', 'Layanan Kami - PT Inti Logam Persada')}</title>
+        <title>{t('services.title', 'Layanan Kami - CV. Inti Logam Persada')}</title>
         <meta name="description" content={t('services.meta', 'Jelajahi layanan manufaktur logam kami, termasuk CNC Machining, Fabrikasi, Welding, dan Surface Finishing.')} />
       </Helmet>
 

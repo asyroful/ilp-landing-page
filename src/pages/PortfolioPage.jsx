@@ -21,7 +21,7 @@ export default function PortfolioPage() {
   return (
     <>
       <Helmet>
-        <title>{t('portfolio.title', 'Portofolio - PT Inti Logam Persada')}</title>
+        <title>{t('portfolio.title', 'Portofolio - CV. Inti Logam Persada')}</title>
         <meta name="description" content={t('portfolio.meta', 'Lihat galeri proyek sukses kami di berbagai industri.')} />
       </Helmet>
 
