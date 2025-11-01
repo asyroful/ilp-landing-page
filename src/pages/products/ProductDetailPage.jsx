@@ -160,7 +160,7 @@ export default function ProductDetailPage() {
                 {product.name}
               </h1>
               <div className="text-base md:text-lg w-full text-gray-700 whitespace-pre-wrap mb-6 md:mb-8">
-                {product.description || "-"}
+                {product.description}
                 <div className="mt-3 md:mt-4">
                   <span className="font-semibold">Material :</span>
                   <ul className="list-disc list-inside mt-2">

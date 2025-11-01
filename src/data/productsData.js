@@ -51,8 +51,12 @@ export const productCategories = [
         id: "pr-4",
         name: "Clamp",
         description:
-          "Clamp untuk pengikat pipa dan komponen lainnya, memberikan kekuatan dan stabilitas.",
-        material: [{ label: "Body", value: "Grey Cast Iron FC250" }],
+          "Berfungsi untuk menambahkan cabang pipa distribusi fluida tanpa perlu memotong atau mengganti pipa lama.",
+        material: [
+          { label: "Body", value: "Grey Cast Iron FC250" },
+          { label: "Mur dan Baut", value: "Carbon Steel" },
+          { label: "Washer", value: "Zinc Plated Steel" }
+        ],
         images: [
           "/projects/Clamp/compressed_PDMS2449 copy.webp",
           "/projects/Clamp/compressed_PDMS2450 copy.webp",
@@ -143,7 +147,11 @@ export const productCategories = [
         id: "pr-23",
         name: "Street Box",
         description: "Berfungsi untuk penutup/proteksi akses valve atau meter air di area permukaan jalan/area industry agar aman dan rapih.",
-        material: [{ label: "Body", value: "Grey Cast Iron FC250" }],
+        material: [
+          { label: "Body", value: "Grey Cast Iron FC250" },
+          { label: "Cover", value: "Grey Cast Iron FC250" },
+          { label: "Baut dan Mur", value: "Carbon Steel" }
+        ],
         images: [
           "/projects/Street Box/compressed_PDMS2653.webp",
           "/projects/Street Box/compressed_PDMS2657.webp",
@@ -241,6 +249,19 @@ export const productCategories = [
           "/projects/Roof Drain/compressed_PDMS2635.webp",
         ],
       },
+      {
+        id: "pr-31",
+        name: "Manhole",
+        description: "Berfungsi sebagai akses menuju saluran bawah tanah baik untuk membersihkan atau memperbaiki saluran drainase.",
+        material: [
+          { label: "Frame", value: "Ductile Iron FCD300" },
+          { label: "Cover", value: "Ductile Iron FCD300" },
+          { label: "Baut dan Mur", value: "Carbon Steel" }
+        ],
+        images: [
+          "/projects/Manhole/manhole.webp",
+        ]
+      }
     ],
   },
   {
@@ -303,7 +324,7 @@ export const productCategories = [
         name: "Hanger Bracket",
         description:
           "Berfungsi untuk mendukung suspensi truk, menopang beban kendaraan, memastikan fungsi pegas daun dengan benar.",
-        material: [{ label: "Body", value: "Ductile Iron FD450" }],
+        material: [{ label: "Body", value: "Ductile Iron FCD450" }],
         images: [
           "/projects/Hanger Bracket/compressed_PDMS2582.webp",
           "/projects/Hanger Bracket/compressed_PDMS2583.webp",
@@ -325,7 +346,7 @@ export const productCategories = [
         id: "pr-16",
         name: "Hanger Helper 2",
         description: "Berfungsi untuk menambah stabilitas dan meredam getaran suspensi truk.",
-        material: [{ label: "Body", value: "Ductile Iron FD450" }],
+        material: [{ label: "Body", value: "Ductile Iron FCD450" }],
         images: [
           "/projects/Hanger Helper 1/compressed_PDMS2521.webp",
           "/projects/Hanger Helper 1/compressed_PDMS2518.webp",
@@ -366,7 +387,35 @@ export const productCategories = [
   {
     key: "mining",
     name: "Mining",
-    products: [],
+    products: [
+      {
+        id: "pr-20",
+        name: "Spring Guide Low Head",
+        description: '',
+        material: [{ label: "Body", value: "Ductile Iron FCD600" }],
+        images: [
+          "/projects/Spring Guide Low Head/spring_guide_low_head.webp"
+        ]
+      },
+      {
+        id: "pr-28",
+        name: "Tension Spring Retaining Plate",
+        description: '',
+        material: [{ label: "Body", value: "Ductile Iron FCD600" }],
+        images: [
+          "/projects/Tension Spring/tension_spring.webp",
+        ]
+      },
+      {
+        id: "pr-29",
+        name: "Spring Support Base",
+        description: '',
+        material: [{ label: "Body", value: "Ductile Iron FCD600" }],
+        images: [
+          "/projects/Spring Support Base/spring_support_base.webp"
+        ],
+      }
+    ],
   },
   {
     key: "other",
@@ -395,6 +444,15 @@ export const productCategories = [
           "/projects/Counter Weight Lift/compressed_PDMS2685.webp",
         ],
       },
+      {
+        id: "pr-30",
+        name: "Counterweight",
+        description: "Berfungsi sebagai beban untuk menahan keramba.",
+        material: [{ label: "Body", value: "Grey Cast Iron FC250" }],
+        images: [
+          "/projects/Counterweight/counterweight.webp",
+        ]
+      }
     ],
   }
 ];
