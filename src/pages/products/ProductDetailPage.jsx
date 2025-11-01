@@ -5,14 +5,11 @@ import { productCategories } from "../../data/productsData";
 import {
   FaArrowLeft,
   FaWhatsapp,
-  FaPhone,
   FaChevronLeft,
   FaChevronRight,
-  FaMailchimp,
   FaEnvelopeOpenText,
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import { FaMessage } from "react-icons/fa6";
 
 export default function ProductDetailPage() {
   const { t } = useTranslation();

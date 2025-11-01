@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
-import { FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp, FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp, FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import PageHeader from '../components/PageHeader';
 
 export default function ContactPage() {
@@ -15,22 +15,22 @@ export default function ContactPage() {
     {
       icon: <FaMapMarkerAlt size={20} className="text-red-600" />,
       label: t('contact_page.address_label'),
-      value: "Batur, RT.05/RW.09, Batur, Tegalrejo, Kec. Ceper, Kabupaten Klaten, Jawa Tengah 57465"
+      value: "Batur RT.01/RW.05, Tegalrejo, Ceper, Klaten, Jawa Tengah 57465"
     },
     {
       icon: <FaPhoneAlt size={20} className="text-red-600" />,
       label: t('contact_page.phone_label'),
-      value: "(021) 598-1635"
+      value: "0813-2904-0497"
     },
     {
       icon: <FaWhatsapp size={20} className="text-red-600" />,
       label: t('contact_page.whatsapp_label'),
-      value: "0812-3456-7890" // Ganti dengan nomor WhatsApp yang benar
+      value: "0895-2893-1203"
     },
     {
       icon: <FaEnvelope size={20} className="text-red-600" />,
       label: t('contact_page.email_label'),
-      value: "marketing@intilogampersada.co.id" // Ganti dengan email yang benar
+      value: "marketing@intilogampersada.com"
     }
   ];
 
@@ -78,6 +78,9 @@ export default function ContactPage() {
                     </a>
                     <a href="https://www.linkedin.com/company/inti-logam-persada/ " target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-red-700 p-2 bg-gray-100 rounded-full transition-colors duration-300">
                         <FaLinkedinIn size={20} />
+                    </a>
+                    <a href="https://www.youtube.com/ " target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-red-700 p-2 bg-gray-100 rounded-full transition-colors duration-300">
+                        <FaYoutube size={20} />
                     </a>
                 </div>
             </div>

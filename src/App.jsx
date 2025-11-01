@@ -1,3 +1,12 @@
+import { useLocation } from 'react-router-dom';
+// Komponen untuk auto scroll ke atas saat route berubah
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [pathname]);
+  return null;
+}
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { FaWhatsapp, FaArrowUp } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
@@ -42,6 +51,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+        <ScrollToTop />
         <MainLayout>
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -62,7 +72,7 @@ function App() {
           </Routes>
           {/* Floating WhatsApp Button */}
           <a
-            href="https://wa.me/6289528931203?text=Halo CV. Inti Logam Persada" // Ganti dengan nomor WhatsApp yang benar
+            href="https://wa.me/6289528931203?text=Halo CV. Inti Logam Persada"
             target="_blank"
             rel="noopener noreferrer"
             className="fixed z-50 bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 flex items-center justify-center transition-colors duration-300"

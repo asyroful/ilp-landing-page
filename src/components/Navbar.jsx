@@ -32,10 +32,9 @@ export default function Navbar() {
       submenu: productCategories.map(cat => ({
         title: t(`navbar.${cat.key}`),
         path: `/products/${cat.key}`,
-        // subProducts: cat.products // bisa dipakai untuk submenu lebih dalam jika ingin
       })),
     },
-    { title: t('navbar.blog'), path: '/blog' },
+    // { title: t('navbar.blog'), path: '/blog' },
     { title: t('navbar.contact'), path: '/contact' },
   ];
 

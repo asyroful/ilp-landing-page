@@ -34,6 +34,11 @@
       "feature3_title": "Modern Technology",
       "feature3_desc": "Adopting the latest machinery and software for precise results."
     },
+    "our_product": {
+      "title": "Our Product",
+      "subtitle": "Our featured products for various industrial needs.",
+      "button": "View All Products"
+    },
     "about_snippet": {
       "title": "Over 25 Years Serving the Industry",
       "description": "CV Inti Logam Persada is an experienced metal casting company, committed to quality, innovation, and customer satisfaction across various industries.",
@@ -52,7 +57,7 @@
     "description": "The leading metal manufacturing solution that prioritizes quality, precision, and innovation to meet global industry needs.",
     "navigation": "Navigation",
     "contact_us": "Contact Us",
-    "address": "Batur, RT.05/RW.09, Batur, Tegalrejo, Kec. Ceper, Kabupaten Klaten, Jawa Tengah 57465",
+    "address": "Batur RT.01/RW.05, Tegalrejo, Ceper, Klaten, Jawa Tengah 57465",
     "email": "Email",
     "phone": "Phone"
   },

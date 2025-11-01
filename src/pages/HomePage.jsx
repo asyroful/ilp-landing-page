@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { FaArrowRight, FaCog, FaShieldAlt, FaTruck, FaMedal, FaUsers, FaDraftingCompass } from 'react-icons/fa';
+import { FaArrowRight, FaMedal, FaUsers, FaDraftingCompass } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useRef, useState } from 'react';
 import { blogPosts } from '../data/blogData';
@@ -17,6 +17,9 @@ import SchindlerLogo from '../assets/customer/schindler.svg';
 import NindyaKaryaLogo from '../assets/customer/nindya_karya.svg';
 import JayaKencanaLogo from '../assets/customer/jaya_kencana.svg';
 import PLNLogo from '../assets/customer/pln.svg';
+import bgProduct from '../assets/bg_product_3.png';
+import LogoILP from '../assets/logo ILP.png';
+import { productCategories } from '../data/productsData';
 
 // --- SUB-KOMPONEN UNTUK KERAPIAN ---
 
@@ -37,9 +40,11 @@ const HeroSection = () => {
   return (
     <div className="relative h-screen flex items-center justify-center text-center overflow-hidden">
       <motion.div
-        className="absolute inset-0 bg-cover bg-center z-0"
+        className="absolute inset-0 bg-cover z-0"
         style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1581092921462-20520a5a3174?q=80&w=2070')",
+          backgroundImage: `url(${bgProduct})`,
+          backgroundPosition: '60% 0%',
+          filter: 'blur(4px)',
           y // Menerapkan efek parallax
         }}
       />
@@ -129,24 +134,14 @@ const AboutSnippetSection = () => {
 
   return (
     <section ref={ref} className="py-20 bg-gray-50 overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="w-full h-[500px] rounded-lg shadow-xl overflow-hidden">
-            <motion.img 
-              src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974" 
-              alt="Tim Profesional" 
-              className="w-full h-full object-cover"
-              style={{ y }} // Terapkan gerakan vertikal
-            />
-          </div>
-          <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeInOut" }}>
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">{t('homepage.about_snippet.title')}</h2>
-            <div className="text-lg text-gray-600 leading-relaxed mb-6">{t('homepage.about_snippet.description')}</div>
-            <Link to="/about" className="inline-flex items-center bg-red-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-red-700 transition-colors">
-              {t('homepage.about_snippet.button')} <FaArrowRight className="ml-2" />
-            </Link>
-          </motion.div>
-        </div>
+      <div className="container mx-auto max-w-5xl px-8 md:px-16 text-center">
+        <motion.div className="w-full" initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeInOut" }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2 md:mb-4">{t('homepage.about_snippet.title')}</h2>
+          <div className="text-base md:text-lg text-gray-600 leading-relaxed mb-4 md:mb-6">{t('homepage.about_snippet.description')}</div>
+          <Link to="/about" className="inline-flex items-center bg-red-600 text-white font-bold py-2 md:py-3 px-4 md:px-6 rounded-lg hover:bg-red-700 transition-colors">
+            {t('homepage.about_snippet.button')} <FaArrowRight className="ml-2" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
@@ -309,8 +304,61 @@ const LatestNewsSection = () => {
   );
 };
 
-
-// --- KOMPONEN UTAMA HOMEPAGE ---
+// Our Product Section
+const OurProductSection = () => {
+  const { t } = useTranslation();
+  // Ambil 1 produk pertama dari tiap kategori yang memiliki produk
+  const categories = productCategories;
+  const featuredProducts = categories
+    .filter(cat => cat.key !== 'other')
+    .map(cat => {
+      if (cat.products && cat.products.length > 0) {
+        const p = cat.products[0];
+        return {
+          ...p,
+          _categoryKey: cat.key,
+          _categoryName: cat.name,
+        };
+      }
+      return null;
+    })
+    .filter(Boolean);
+  return (
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">{t('homepage.our_product.title', 'Our Product')}</h2>
+        <div className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">{t('homepage.our_product.subtitle', 'Produk-produk unggulan kami untuk berbagai kebutuhan industri.')}</div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-8">
+          {featuredProducts.map((product) => (
+            <div key={product.id} className="bg-white rounded-lg shadow flex flex-col overflow-hidden hover:shadow-lg transition-shadow">
+              <img
+                src={product.images && product.images.length > 0 ? product.images[0] : '/assets/no-image.png'}
+                alt={product.name}
+                className="w-full h-40 object-contain bg-gray-50"
+              />
+              <div className="p-4 flex-1 flex flex-col">
+                <h3 className="text-lg font-bold mb-2 line-clamp-2">{product.name}</h3>
+                <p className="text-gray-600 text-sm mb-4 flex-1 line-clamp-3">{product.description}</p>
+                <Link
+                  to={`/products/${product._categoryKey}/${product.id}`}
+                  className="mt-auto inline-block text-red-600 font-semibold hover:underline"
+                >
+                  {t('products_page.button_view', 'View Product')}
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+        <Link
+          to="/products"
+          className="inline-block bg-red-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-red-700 transition-colors shadow-lg"
+        >
+          {t('homepage.our_product.button', 'View All Products')}
+        </Link>
+      </div>
+    </section>
+  );
+};
 export default function HomePage() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -324,8 +372,9 @@ export default function HomePage() {
       
       <HeroSection />
       <WhyChooseUsSection />
+      <OurProductSection />
       <AboutSnippetSection />
-      <LatestNewsSection />
+      {/* <LatestNewsSection /> */}
       <ClientLogosSection />
       <CtaSection />
     </>

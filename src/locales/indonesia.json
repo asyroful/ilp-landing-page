@@ -34,6 +34,11 @@
       "feature3_title": "Teknologi Modern",
       "feature3_desc": "Mengadopsi mesin dan perangkat lunak terkini untuk hasil presisi."
     },
+    "our_product": {
+      "title": "Produk Kami",
+      "subtitle": "Produk-produk unggulan kami untuk berbagai kebutuhan industri.",
+      "button": "Lihat Semua Produk"
+    },
     "about_snippet": {
       "title": "Lebih dari 25 Tahun Melayani Industri",
       "description": "CV Inti Logam Persada adalah perusahaan pengecoran logam yang berpengalaman, berkomitmen pada kualitas, inovasi, dan kepuasan pelanggan di berbagai industri.",
@@ -52,7 +57,7 @@
     "description": "Solusi manufaktur logam terdepan yang mengedepankan kualitas, presisi, dan inovasi untuk memenuhi kebutuhan industri global.",
     "navigation": "Navigasi",
     "contact_us": "Hubungi Kami",
-    "address": "Batur, RT.05/RW.09, Batur, Tegalrejo, Kec. Ceper, Kabupaten Klaten, Jawa Tengah 57465",
+    "address": "Batur RT.01/RW.05, Tegalrejo, Ceper, Klaten, Jawa Tengah 57465",
     "email": "Email",
     "phone": "Telepon"
   },
