@@ -105,6 +105,7 @@ export default function ProductDetailPage() {
                     src={mainImage}
                     alt={product.name}
                     className="rounded-lg shadow w-full object-contain bg-gray-50"
+                    style={{ maxHeight: '500px' }}
                   />
                   {images.length > 1 && (
                     <button
@@ -116,15 +117,32 @@ export default function ProductDetailPage() {
                     </button>
                   )}
                 </div>
-                {/* Thumbnails vertical */}
+                {/* Thumbnails vertical, align items-start, hide overflow if too tall, auto-scroll to active */}
                 {images.length > 1 && (
-                  <div className="flex flex-col gap-2">
+                  <div
+                    className="flex flex-col gap-2 items-start overflow-y-hidden"
+                    style={{ maxHeight: '500px', position: 'relative' }}
+                    ref={el => {
+                      // Auto scroll thumbnail to active
+                      if (el && images.length > 5) {
+                        const activeBtn = el.querySelector('.thumbnail-active');
+                        if (activeBtn) {
+                          const btnTop = activeBtn.offsetTop;
+                          const btnHeight = activeBtn.offsetHeight;
+                          const containerHeight = el.offsetHeight;
+                          // Scroll so active is always visible in center
+                          el.scrollTop = btnTop - containerHeight / 2 + btnHeight / 2;
+                        }
+                      }
+                    }}
+                  >
                     {images.map((img, idx) => (
                       <button
                         key={img}
-                        className={`border rounded-lg p-1 bg-white shadow ${mainImageIdx === idx ? "border-red-500" : "border-gray-200"}`}
+                        className={`border rounded-lg p-1 bg-white shadow ${mainImageIdx === idx ? "border-red-500 thumbnail-active" : "border-gray-200"}`}
                         onClick={() => setMainImageIdx(idx)}
                         aria-label={`Show image ${idx + 1}`}
+                        style={{ minWidth: '56px' }}
                       >
                         <img
                           src={img}
