@@ -264,7 +264,7 @@ const CtaSection = () => {
           {t('homepage.cta.subtitle')}
         </motion.p>
         <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.4 }}>
-          <Link to="/contact" className="bg-white text-red-700 font-bold py-4 px-10 rounded-lg text-lg hover:bg-gray-100 transition-colors shadow-lg">
+          <Link to="/contact" id="cta-homepage-contact-button" className="bg-white text-red-700 font-bold py-4 px-10 rounded-lg text-lg hover:bg-gray-100 transition-colors shadow-lg">
             {t('homepage.cta.button')}
           </Link>
         </motion.div>
