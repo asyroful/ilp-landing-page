@@ -7,7 +7,7 @@ function ScrollToTop() {
   }, [pathname]);
   return null;
 }
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { FaWhatsapp, FaArrowUp } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
@@ -35,6 +35,15 @@ import ProductsPage from './pages/products/ProductsPage';
 function App() {
   // State untuk tombol scroll ke atas
   const [showScroll, setShowScroll] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const path = sessionStorage.getItem('redirect');
+    if (path) {
+      sessionStorage.removeItem('redirect');
+      navigate(path, { replace: true });
+    }
+  }, [navigate]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -98,4 +107,12 @@ function App() {
   );
 }
 
-export default App;
+function RoutedApp() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}
+
+export default RoutedApp;
