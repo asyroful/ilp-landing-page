@@ -9,7 +9,8 @@ import Hooks from "./hooks/Hooks";
 import Loader from "./components/Loader";
 import './lib/i18n'
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+const rootElement = document.getElementById("root");
+const app = (
   <React.StrictMode>
     <AlertProvider>
       <UserProvider>
@@ -21,3 +22,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </AlertProvider>
   </React.StrictMode>
 );
+
+// Support react-snap pre-rendering
+if (rootElement.hasChildNodes()) {
+  ReactDOM.hydrateRoot(rootElement, app);
+} else {
+  ReactDOM.createRoot(rootElement).render(app);
+}
