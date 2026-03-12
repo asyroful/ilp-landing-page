@@ -1,4 +1,9 @@
-import { useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { FaWhatsapp, FaArrowUp } from 'react-icons/fa';
+import { useEffect, useState } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
+import MainLayout from './layouts/MainLayout';
+
 // Komponen untuk auto scroll ke atas saat route berubah
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -7,11 +12,6 @@ function ScrollToTop() {
   }, [pathname]);
   return null;
 }
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
-import { FaWhatsapp, FaArrowUp } from 'react-icons/fa';
-import { useEffect, useState } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
-import MainLayout from './layouts/MainLayout';
 
 // Import semua halaman
 import HomePage from './pages/HomePage';
@@ -59,50 +59,48 @@ function App() {
 
   return (
     <HelmetProvider>
-      <Router>
-        <ScrollToTop />
-        <MainLayout>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/about/profile" element={<ProfilePage />} />
-            <Route path="/about/customers" element={<CustomersPage />} />
-            <Route path="/about/vision-mission" element={<VisionMissionPage />} />
-            <Route path="/about/values" element={<ValuesPage />} />
-            <Route path="/about/csr" element={<CsrPage />} />
-            <Route path="/products" element={<ProductsPage />} />
-            <Route path="/products/:category" element={<ProductsPage />} />
-            <Route path="/products/:category/:slug" element={<ProductDetailPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/portfolio" element={<PortfolioPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/blog/:slug" element={<SinglePostPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
-          {/* Floating WhatsApp Button */}
-          <a
-            href="https://wa.me/6289528931203?text=Halo CV. Inti Logam Persada"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="fixed z-50 bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 flex items-center justify-center transition-colors duration-300"
-            aria-label="Chat WhatsApp"
+      <ScrollToTop />
+      <MainLayout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/about/profile" element={<ProfilePage />} />
+          <Route path="/about/customers" element={<CustomersPage />} />
+          <Route path="/about/vision-mission" element={<VisionMissionPage />} />
+          <Route path="/about/values" element={<ValuesPage />} />
+          <Route path="/about/csr" element={<CsrPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/products/:category" element={<ProductsPage />} />
+          <Route path="/products/:category/:slug" element={<ProductDetailPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<SinglePostPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+        {/* Floating WhatsApp Button */}
+        <a
+          href="https://wa.me/6089528931203?text=Halo CV. Inti Logam Persada"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed z-50 bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 flex items-center justify-center transition-colors duration-300"
+          aria-label="Chat WhatsApp"
+          style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.18)' }}
+        >
+          <FaWhatsapp size={32} />
+        </a>
+        {/* Floating Scroll to Top Button */}
+        {showScroll && (
+          <button
+            onClick={handleScrollTop}
+            className="fixed z-50 bottom-24 right-6 opacity-40 bg-red-600 hover:bg-red-700 text-white rounded-full shadow-lg p-4 flex items-center justify-center transition-colors duration-300 animate-bounce"
+            aria-label="Scroll to top"
             style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.18)' }}
           >
-            <FaWhatsapp size={32} />
-          </a>
-          {/* Floating Scroll to Top Button */}
-          {showScroll && (
-            <button
-              onClick={handleScrollTop}
-              className="fixed z-50 bottom-24 right-6 opacity-40 bg-red-600 hover:bg-red-700 text-white rounded-full shadow-lg p-4 flex items-center justify-center transition-colors duration-300 animate-bounce"
-              aria-label="Scroll to top"
-              style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.18)' }}
-            >
-              <FaArrowUp size={28} />
-            </button>
-          )}
-        </MainLayout>
-      </Router>
+            <FaArrowUp size={28} />
+          </button>
+        )}
+      </MainLayout>
     </HelmetProvider>
   );
 }
