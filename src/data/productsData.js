@@ -100,6 +100,7 @@ export const productCategories = [
         description: "Berfungsi untuk menyambungkan dua pipa secara fleksibel tanpa memerlukan pengelasan, terutama untuk perbaikan kebocoran.",
         material: [
           { label: "Body", value: "Grey Cast Iron FC250" },
+          { label: "End Ring", value: "Grey Cast Iron FC250" },
           { label: "Mur dan Baut", value: "Carbon Steel" },
           { label: "Washer", value: "Zinc Plated Steel" },
           { label: "Seal O-Ring", value: "NBR" },
